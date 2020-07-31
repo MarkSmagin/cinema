@@ -23,10 +23,10 @@
         
         <nav style="float: left; margin-right: 20px;">
             <ul>
-                <li><a href="">ЗАКАЗАТЬ БИЛЕТ</a></li>
-                <li><a href="">ПРЕИМУЩЕСТВА</a></li>
-                <li><a href="">ФИЛЬМЫ</a></li>
-                <li><a href="">КОНТАКТЫ</a></li>
+                <li><a href="#selectmovie">ЗАКАЗАТЬ БИЛЕТ</a></li>
+                <li><a href="#whywe">ПРЕИМУЩЕСТВА</a></li>
+                <li><a href="#movies">ФИЛЬМЫ</a></li>
+                <li><a href="#contacts">КОНТАКТЫ</a></li>
             </ul>
         </nav>
         
@@ -48,14 +48,18 @@
     </article>
 
     <section>
-        <h3>Почему мы?</h3> 
+        <h3><a id="whywe">Почему мы?</a></h3> 
 
         <article>
             <img src="img/b2_icon_1.jpg" alt="">
 
             <h4>Большие экраны</h4>
 
-            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. At autem cum dolores dolorum eius<br> error expedita illum itaque molestiae mollitia nemo,<br> nostrum officia quas ratione tempora temporibus<br> veritatis vero voluptates.</sub></blockquote></p>
+            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
+                adipisicing elit. At autem cum dolores dolorum eius<br/>
+                error expedita illum itaque molestiae mollitia nemo,<br/>
+                nostrum officia quas ratione tempora temporibus<br/>
+                veritatis vero voluptates.</sub></blockquote></p>
         </article>
 
         <article>
@@ -71,23 +75,65 @@
 
             <h4>Удобные кресла</h4>
 
-            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. At autem cum dolores dolorum eius<br> error expedita illum itaque molestiae mollitia nemo,<br> nostrum officia quas ratione tempora temporibus<br> veritatis vero voluptates.</sub></blockquote></p>
+            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
+                adipisicing elit. At autem cum dolores dolorum eius<br/>
+                error expedita illum itaque molestiae mollitia nemo,<br/>
+                nostrum officia quas ratione tempora temporibus<br/>
+                veritatis vero voluptates.</sub></blockquote></p>
         </article>
     </section>
     <!-- Конец секции Почему мы?-->
 
     <!-- Секция Выберите фильм-->
     <section>
-        <h3>Выберите фильм</h3>
+        <h3><a id="selectmovie">Выберите фильм</a></h3>
+        <table cellspacing="5" cellpadding="5" border="1px">
+            <thead>
+                <tr>
+                    <td colspan="2">Начало сеанса</td>
+                    <td>Название фильма</td>
+                    <td>Жанр</td>
+                </tr>
+            </thead>
+
+            <tfoot >
+                <tr>
+                    <td>Ячейка 1, расположенная в TFOOT</td>
+                    <td>Ячейка 2, расположенная в TFOOT</td> 
+                </tr> 
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">Check</td>
+                    <td>10:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/838/" title="КиноПоиск Человек-Паук" target="_blank">Человек-паук</a></td>
+                    <td>фантастика, боевик, приключения</td>
+                </tr>
+                <tr>
+                    <td>12:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/1122114/" title="КиноПоиск Собачья жизнь 2" target="_blank">Собачья жизнь 2</a></td>
+                    <td>фэнтези, драма, комедия</td>
+                </tr>
+                <tr>
+                    <td>Check</td>
+                    <td>14:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/846824/" title="КиноПоиск История игрушек 4" target="_blank">История игрушек 4</a></td>
+                    <td>мультфильм, фэнтези, комедия</td>
+                </tr>
+                <tr>
+                    <td>Check</td>
+                    <td>16:00</td>
+                    <td><a href="https://www.kinopoisk.ru/film/693730/" title="КиноПоиск Люди в черном: Интернэшнл" target="_blank">Люди в черном: Интернэшнл</a></td>
+                    <td>фантастика, боевик, комедия</td>
+                </tr>
+            </tbody>
+        </table>
         
-        <b>Начало сеанса 	Название фильма 	Жанр</b>
         <p>
-           10:00	<a href="https://www.kinopoisk.ru/film/838/" title="КиноПоиск Человек-Паук" target="_blank">Человек-паук</a> фантастика, боевик, приключения<br/>
-           12:00	<a href="https://www.kinopoisk.ru/film/1122114/" title="КиноПоиск Собачья жизнь 2" target="_blank">Собачья жизнь 2</a> фэнтези, драма, комедия<br/>
-           14:00	<a href="https://www.kinopoisk.ru/film/846824/" title="КиноПоиск История игрушек 4" target="_blank">История игрушек 4</a> мультфильм, фэнтези, комедия<br/>
-           16:00	<a href="https://www.kinopoisk.ru/film/693730/" title="КиноПоиск Люди в черном: Интернэшнл" target="_blank">Люди в черном: Интернэшнл</a> фантастика, боевик, комедия<br/>
+            <blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br/>
+            delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</sub></blockquote>
         </p>
-        <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br> delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</sub></blockquote></p>
     </section>
     <!-- Конец секции Выберите фильм-->
 
@@ -115,7 +161,7 @@
 
     <!-- Сеция Фильмы -->
     <section>
-        <h3>Фильмы</h3>
+        <h3><a id="movies">Фильмы</a></h3>
 
         <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,<br/>
         laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</sub></blockquote></p>
@@ -142,6 +188,7 @@
     
     <!-- Подвал сайта -->
     <footer>
+        <a id="contacts"></a>
         <a href="">Facebook</a>
         <a href="">Twitter</a>
         <a href="">Google+</a>
@@ -149,6 +196,166 @@
         <p>Powered by Mark Smagin</p>
     </footer>
     <!-- Конец Подвала сайта -->
+
+    <!-- Выполнение заданий ТЗ-4 -->
+    <section>
+        <h3>Заказать билет</h3>
+        <form id="buyticket" action="order.php" enctype="multipart/form-data" method="post">
+            <label>
+                Введите ваше имя:
+                <input type="text" required><br/>
+            </label>
+            <br/>
+            <label>
+                Введите ваш адресс электронной почты:
+                <input type="email" required>
+            </label>
+            <br/>
+            <label for="">
+                Выберите место:
+                <select>
+                    <option value="Место№1">Место №1</option>
+                    <option value="Место№2">Место №2</option>
+                    <option value="Место№3">Место №3</option>
+                    <option value="Место№4">Место №4</option>
+                    <option value="Место№5">Место №5</option>
+                    <option value="Место№6">Место №6</option>
+                    <option value="Место№7">Место №7</option>
+                    <option value="Место№8">Место №8</option>
+                    <option value="Место№9">Место №9</option>
+                    <option value="Место№10">Место №10</option>
+                </select>
+            </label>
+            <br/>
+            <label>
+                Ваш комментарий:
+                <textarea cols="30" rows="10" placeholder="Комментарий"></textarea>
+            </label>
+            <br/>
+            <label>
+                <input type="file" name="File1">
+            </label>
+            <br/>
+            <label>
+                <input type="checkbox" name="option1" required>Я согласен на обработку персональных данных
+            </label>
+            <br/>
+            <label>
+                <input type="submit" value="Заказать">
+            </label>
+            <br/>
+            <label>
+                <button type="submit">Заказать</button>
+            </label>
+            <br/>
+        </form>
+
+        <label>
+            <input type="submit" form="buyticket" value="Заказать"><br/>
+        </label>
+
+        <label>
+            <button type="submit" form="buyticket">Заказать</button><br/>
+        </label>
+    </section>
+
+    <h5>Виды списков:</h5>
+
+    <h6>Маркированный</h6>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <h6>Нумерованный</h6>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+
+    <h6>Список определений</h6>
+    <dl>
+        <dt>Термин 1</dt>
+        <dd>Определение термина 1</dd>
+        <dt>Термин 2</dt>
+        <dd>Определение термина 2</dd>
+    </dl>
+
+    <h6>Список без атрибутов</h6>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом reversed</h6>
+    <ol reversed>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом start</h6>
+    <ol start="4">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом type="1"</h6>
+    <ol type="1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом type="A"</h6>
+    <ol type="A">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом type="a"</h6>
+    <ol type="a">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом type="i"</h6>
+    <ol type="i">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <h6>Список с атрибутом type="I"</h6>
+    <ol type="I">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
 </body>
 </html>
 
