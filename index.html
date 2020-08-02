@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://use.fontawesome.com/80aa202096.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
-<style>
-    a { 
-     text-decoration: none; /* Убираем подчеркивание у ссылок */
-    } 
-   </style>
+
 <body>
     <!-- Шапка сайта-->
     <header>
@@ -39,7 +38,7 @@
 
     <!-- Секция Почему мы?-->
     <article>
-        <h3>Добро пожаловать!</h3>
+        <h2>Добро пожаловать!</h2>
 
         <sub>
             <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.</p>
@@ -48,12 +47,12 @@
     </article>
 
     <section>
-        <h3><a id="whywe">Почему мы?</a></h3> 
+        <h2 id="whywe">Почему мы?</h2> 
 
         <article>
             <img src="img/b2_icon_1.jpg" alt="">
 
-            <h4>Большие экраны</h4>
+            <h3>Большие экраны</h3>
 
             <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
                 adipisicing elit. At autem cum dolores dolorum eius<br/>
@@ -65,7 +64,7 @@
         <article>
             <img src="img/b2_icon_2.jpg" alt="">
 
-            <h4>Объемный звук</h4>
+            <h3>Объемный звук</h3>
 
             <p><blockquote><sub>Lorem ipsum dolor sit amet.</sub></blockquote></p>
         </article>
@@ -73,7 +72,7 @@
         <article>
             <img src="img/b2_icon_3.jpg" alt="">
 
-            <h4>Удобные кресла</h4>
+            <h3>Удобные кресла</h3>
 
             <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
                 adipisicing elit. At autem cum dolores dolorum eius<br/>
@@ -86,50 +85,43 @@
 
     <!-- Секция Выберите фильм-->
     <section>
-        <h3><a id="selectmovie">Выберите фильм</a></h3>
-        <table cellspacing="5" cellpadding="5" border="1px">
-            <thead>
-                <tr>
-                    <td colspan="2">Начало сеанса</td>
-                    <td>Название фильма</td>
-                    <td>Жанр</td>
-                </tr>
-            </thead>
-
-            <tfoot >
-                <tr>
-                    <td>Ячейка 1, расположенная в TFOOT</td>
-                    <td>Ячейка 2, расположенная в TFOOT</td> 
-                </tr> 
-            </tfoot>
-
-            <tbody>
-                <tr>
-                    <td rowspan="2">Check</td>
-                    <td>10:00</td>
-                    <td><a href="https://www.kinopoisk.ru/film/838/" title="КиноПоиск Человек-Паук" target="_blank">Человек-паук</a></td>
-                    <td>фантастика, боевик, приключения</td>
-                </tr>
-                <tr>
-                    <td>12:00</td>
-                    <td><a href="https://www.kinopoisk.ru/film/1122114/" title="КиноПоиск Собачья жизнь 2" target="_blank">Собачья жизнь 2</a></td>
-                    <td>фэнтези, драма, комедия</td>
-                </tr>
-                <tr>
-                    <td>Check</td>
-                    <td>14:00</td>
-                    <td><a href="https://www.kinopoisk.ru/film/846824/" title="КиноПоиск История игрушек 4" target="_blank">История игрушек 4</a></td>
-                    <td>мультфильм, фэнтези, комедия</td>
-                </tr>
-                <tr>
-                    <td>Check</td>
-                    <td>16:00</td>
-                    <td><a href="https://www.kinopoisk.ru/film/693730/" title="КиноПоиск Люди в черном: Интернэшнл" target="_blank">Люди в черном: Интернэшнл</a></td>
-                    <td>фантастика, боевик, комедия</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container">
+            <div class="movie-list">
+                <h2 class="movie-list__header" id="selectmovie">Выберите фильм</h2>
+                <table class="movie-list__table">
+                    <thead class="movie-list__thead">
+                        <tr class="movie-list__hat">
+                            <th class="movie-list__headtime"><a href="#">Time<i class="fa fa-caret-down"></i></a></th>
+                            <th class="movie-list__headname" colspan="2"><a href="#">Stuff that will happen<i class="fa fa-caret-up" aria-hidden="true"></i></a></th>
+                        </tr>
+                    </thead>
         
+                    <tbody class="movie-list__tbody">
+                        <tr class="movie-list__first">
+                            <td class="movie-list__time">10am - 12pm</td>
+                            <td class="movie-list__name">Introduction and presentations about Envato</td>
+                            <td class="movie-list_plus"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__second">
+                            <td class="movie-list__time">12pm - 02pm</td>
+                            <td class="movie-list__name">Sessions by honorable guests and Speakers</td>
+                            <td class="movie-list_plus"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__third">
+                            <td class="movie-list__time">02pm - 03pm</td>
+                            <td class="movie-list__name">Break and Mingle time with the authors</td>
+                            <td class="movie-list_plus"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__first">
+                            <td class="movie-list__time">03pm - 05pm</td>
+                            <td class="movie-list__name">Portfolio Review, Rewards and Ending Presentation</td>
+                            <td class="movie-list_plus"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <p>
             <blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br/>
             delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</sub></blockquote>
@@ -142,7 +134,7 @@
         <img src="img/b4_img.jpg" alt="Подарок">
         <img src="img/b4_bg.jpg" alt="Билеты">
 
-        <h3>Подарок каждому!</h3>
+        <h2>Подарок каждому!</h2>
 
         <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
             nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam! Lorem ipsum dolor sit amet,<br/>
@@ -161,7 +153,7 @@
 
     <!-- Сеция Фильмы -->
     <section>
-        <h3><a id="movies">Фильмы</a></h3>
+        <h2 id="movies">Фильмы</h2>
 
         <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,<br/>
         laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</sub></blockquote></p>
@@ -199,7 +191,7 @@
 
     <!-- Выполнение заданий ТЗ-4 -->
     <section>
-        <h3>Заказать билет</h3>
+        <h2>Заказать билет</h2>
         <form id="buyticket" action="order.php" enctype="multipart/form-data" method="post">
             <label>
                 Введите ваше имя:

@@ -1,0 +1,87 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a { 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #ffffff;
+} 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container{
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+.movie-list__header{
+    color: #252525;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin: 78px;
+}
+
+.movie-list__table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.movie-list__thead{
+    background-color: #a3cc40;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.movie-list__hat{
+    height: 75px;
+    text-align: center;
+}
+
+.movie-list__headtime{
+    padding-left: 11px;
+}
+
+.movie-list__headname{
+    padding-right: 364px;
+}
+
+.movie-list__tbody{
+    font-size: 22px;
+    vertical-align: top;
+}
+
+.movie-list__first{
+    background-color: #373737;
+    height: 75px;
+}
+
+.movie-list__second{
+    background-color: #4b4d4f;
+    height: 75px;
+}
+
+.movie-list__third{
+    background-color: #6c6c6c;
+    height: 75px;
+}
+
+.movie-list__time{
+    padding-top: 24px;
+    padding-left: 46px;
+}
+
+.movie-list__name{
+    padding-top: 24px;
+    padding-left: 79px;
+}
+
+.movie-list_plus{ 
+    padding-top: 22px;
+    padding-right: 32px;
+}
+
