@@ -15,6 +15,7 @@ a {
     margin: 0 auto;
 }
 
+/* Стили для секции "Выберите фильм" */
 .movie-list__header{
     color: #252525;
     font-size: 50px;
@@ -23,65 +24,61 @@ a {
     margin: 78px;
 }
 
+/* Таблица */
 .movie-list__table{
     width: 100%;
     border-collapse: collapse;
     border-radius: 15px;
     overflow: hidden;
     color: #fff;
-}
-
-.movie-list__thead{
-    background-color: #a3cc40;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.movie-list__hat{
-    height: 75px;
-    text-align: center;
-}
-
-.movie-list__headtime{
-    padding-left: 11px;
-}
-
-.movie-list__headname{
-    padding-right: 364px;
-}
-
-.movie-list__tbody{
-    font-size: 22px;
     vertical-align: top;
 }
 
-.movie-list__first{
+.movie-list__row_head{
+    background-color: #a3cc40;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.movie-list__row{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.size{
+    height: 75px;
+}
+
+.color_dark{
     background-color: #373737;
-    height: 75px;
 }
 
-.movie-list__second{
+.color_light{
     background-color: #4b4d4f;
-    height: 75px;
 }
 
-.movie-list__third{
+.color_third_row{
     background-color: #6c6c6c;
-    height: 75px;
+}
+
+.movie-list__headtime{
+    padding-left: 50px;
+}
+
+.movie-list__headname{
+    padding-right: 330px;
 }
 
 .movie-list__time{
-    padding-top: 24px;
-    padding-left: 46px;
+    text-align: center;
+    padding-left: 25px;
 }
 
 .movie-list__name{
-    padding-top: 24px;
-    padding-left: 79px;
+    padding-left: 103px;
 }
 
 .movie-list_plus{ 
-    padding-top: 22px;
-    padding-right: 32px;
+    padding-right: 34px;
 }
-
