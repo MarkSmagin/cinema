@@ -46,19 +46,19 @@ a {
     font-size: 22px;
 }
 
-.size{
+.row-size{
     height: 75px;
 }
 
-.color_dark{
+.row-color_dark{
     background-color: #373737;
 }
 
-.color_light{
+.row-color_light{
     background-color: #4b4d4f;
 }
 
-.color_third_row{
+.row-color_third{
     background-color: #6c6c6c;
 }
 
