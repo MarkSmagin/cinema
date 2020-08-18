@@ -34,7 +34,7 @@ a {
     vertical-align: top;
 }
 
-.movie-list__row_head{
+.movie-list__thead{
     background-color: #a3cc40;
     font-size: 30px;
     font-weight: 700;
@@ -46,19 +46,19 @@ a {
     font-size: 22px;
 }
 
-.row-size{
+.movie-list__row-size{
     height: 75px;
 }
 
-.row-color_dark{
+.movie-list__row_dark{
     background-color: #373737;
 }
 
-.row-color_light{
+.movie-list__row_light{
     background-color: #4b4d4f;
 }
 
-.row-color_third{
+.movie-list__row_third{
     background-color: #6c6c6c;
 }
 
