@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/icons.css">
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
 <body>
     <!-- Шапка сайта-->
-    <header>
-        <img src="img/top_bg.jpg" alt="Вид кинозала">
+    <div class="block-hat">
+        <div class="container">
+            <header class="block-hat__header">
+                <div class="block-hat__row">
+                    <div class="block-hat__logo">
+                        <a class="logo_img" href="https://innopolis.university/" title="Университет Иннополис" target="_blank"><img src="img/logo.png" alt="logotip"></a>
+                    </div>
 
-        <div  style="float: left; margin-right: 20px; background-color: black;">
-            <a href="https://innopolis.university/" title="Университет Иннополис" target="_blank">
-                <img src="img/logo.png" alt="Логотип Университета Иннополис">
-            </a>
+                    <div class="block-hat__menu">
+                        <nav class="block-hat__nav">
+                            <ul>
+                                <li><a href="#selectmovie">заказать билет</a></li>
+                                <li><a href="#whywe">преимущества</a></li>
+                                <li><a href="#movies">фильмы</a></li>
+                                <li><a href="#contacts">контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="block-hat__city">
+                        <p class="city_choose">
+                            <span>Ваш город: </span>
+                            <a href="#">Москва</a>
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="block-hat__main">
+                <h1 class="block-hat__h1">Закажите билет в кино</h1>
+                <h2 class="block-hat__h2">Всем покупателям подарок!</h2>
+            </div>
         </div>
-        
-        <nav style="float: left; margin-right: 20px;">
-            <ul>
-                <li><a href="#selectmovie">ЗАКАЗАТЬ БИЛЕТ</a></li>
-                <li><a href="#whywe">ПРЕИМУЩЕСТВА</a></li>
-                <li><a href="#movies">ФИЛЬМЫ</a></li>
-                <li><a href="#contacts">КОНТАКТЫ</a></li>
-            </ul>
-        </nav>
-        
-        <sup>Ваш город: <u>Москва</u></sup>
-
-        <h1>Закажите билет в кино</h1>
-        <h2>Всем покупателям подарок!</h2>
-    </header>
-    <!-- Шапка сайта-->
+    </div>
 
     <!-- Секция Почему мы?-->
     <article>
-        <h2>Добро пожаловать!</h2>
+        <p>Добро пожаловать!</p>
 
         <sub>
             <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.</p>
@@ -47,39 +59,41 @@
     </article>
 
     <section>
-        <h2 id="whywe">Почему мы?</h2> 
+        <div class="container">
+            <h2 id="whywe">Почему мы?</h2> 
 
-        <article>
-            <img src="img/b2_icon_1.jpg" alt="">
+            <article>
+                <img src="img/b2_icon_1.jpg" alt="">
 
-            <h3>Большие экраны</h3>
+                <h3>Большие экраны</h3>
 
-            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
-                adipisicing elit. At autem cum dolores dolorum eius<br/>
-                error expedita illum itaque molestiae mollitia nemo,<br/>
-                nostrum officia quas ratione tempora temporibus<br/>
-                veritatis vero voluptates.</sub></blockquote></p>
-        </article>
+                <p>Lorem ipsum dolor sit amet, consectetur<br/>
+                    adipisicing elit. At autem cum dolores dolorum eius<br/>
+                    error expedita illum itaque molestiae mollitia nemo,<br/>
+                    nostrum officia quas ratione tempora temporibus<br/>
+                    veritatis vero voluptates.</p>
+            </article>
 
-        <article>
-            <img src="img/b2_icon_2.jpg" alt="">
+            <article>
+                <img src="img/b2_icon_2.jpg" alt="">
 
-            <h3>Объемный звук</h3>
+                <h3>Объемный звук</h3>
 
-            <p><blockquote><sub>Lorem ipsum dolor sit amet.</sub></blockquote></p>
-        </article>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </article>
 
-        <article>
-            <img src="img/b2_icon_3.jpg" alt="">
+            <article>
+                <img src="img/b2_icon_3.jpg" alt="">
 
-            <h3>Удобные кресла</h3>
+                <h3>Удобные кресла</h3>
 
-            <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur<br/>
-                adipisicing elit. At autem cum dolores dolorum eius<br/>
-                error expedita illum itaque molestiae mollitia nemo,<br/>
-                nostrum officia quas ratione tempora temporibus<br/>
-                veritatis vero voluptates.</sub></blockquote></p>
-        </article>
+                <p>Lorem ipsum dolor sit amet, consectetur<br/>
+                    adipisicing elit. At autem cum dolores dolorum eius<br/>
+                    error expedita illum itaque molestiae mollitia nemo,<br/>
+                    nostrum officia quas ratione tempora temporibus<br/>
+                    veritatis vero voluptates.</p>
+            </article>
+        </div>
     </section>
     <!-- Конец секции Почему мы?-->
 
@@ -123,52 +137,55 @@
         </div>
 
         <p>
-            <blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br/>
-            delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</sub></blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br/>
+            delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!
         </p>
     </section>
     <!-- Конец секции Выберите фильм-->
 
     <!-- Секция Подарок каждому! -->
     <section>
-        <img src="img/b4_img.jpg" alt="Подарок">
-        <img src="img/b4_bg.jpg" alt="Билеты">
-
-        <h2>Подарок каждому!</h2>
-
-        <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
-            nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam! Lorem ipsum dolor sit amet,<br/>
-            consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis<br/>
-            obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</sub></blockquote></p>
-
-        <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
-            nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</sub></blockquote></p>
-
-        <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
-            nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</sub></blockquote></p>
-        Получить подарок
-        
+        <div class="container">
+            <img src="img/b4_img.jpg" alt="Подарок">
+            <img src="img/b4_bg.jpg" alt="Билеты">
+    
+            <h2>Подарок каждому!</h2>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
+                nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam! Lorem ipsum dolor sit amet,<br/>
+                consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis<br/>
+                obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</p>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
+                nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</p>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia<br/>
+                nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</p>
+            <a class="button" href="#">Получить подарок</a> 
+        </div>
     </section>
     <!-- Конец секции Подарок каждому! -->
 
     <!-- Сеция Фильмы -->
     <section>
-        <h2 id="movies">Фильмы</h2>
+        <div class="container">
+            <h2 id="movies">Фильмы</h2>
 
-        <p><blockquote><sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,<br/>
-        laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</sub></blockquote></p>
-        
-        <img src="img/mov1.jpg" alt="Человек-паук">
-        Человек-паук
-        Lorem ipsum dolor sit amet, consectetur
-        
-        <img src="img/mov2.jpg" alt="Собачья жизнь 2">
-        Собачья жизнь 2
-        Lorem ipsum dolor sit amet, consectetur
-  
-        <img src="img/mov3.jpg" alt="Люди в черном: Интернэшнл">
-        Люди в черном: Интернэшнл
-        Lorem ipsum dolor sit amet, consectetur
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,<br/>
+            laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</p>
+            
+            <img src="img/mov1.jpg" alt="Человек-паук">
+            Человек-паук
+            Lorem ipsum dolor sit amet, consectetur
+            
+            <img src="img/mov2.jpg" alt="Собачья жизнь 2">
+            Собачья жизнь 2
+            Lorem ipsum dolor sit amet, consectetur
+    
+            <img src="img/mov3.jpg" alt="Люди в черном: Интернэшнл">
+            Люди в черном: Интернэшнл
+            Lorem ipsum dolor sit amet, consectetur
+        </div>
     </section>
     <!-- Конец секции Фильмы -->
 
@@ -180,30 +197,32 @@
     
     <!-- Подвал сайта -->
     <footer>
-        <a id="contacts"></a>
-        <a href="">Facebook</a>
-        <a href="">Twitter</a>
-        <a href="">Google+</a>
-        <a href="">Vkontakte</a>
-        <p>Powered by Mark Smagin</p>
+        <div class="container">
+            <a id="contacts"></a>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Google+</a>
+            <a href="">Vkontakte</a>
+            <p>Powered by Mark Smagin</p>
+        </div>
     </footer>
     <!-- Конец Подвала сайта -->
 
-    <!-- Выполнение заданий ТЗ-4 -->
+    <!-- Форма -->
     <section>
         <h2>Заказать билет</h2>
         <form id="buyticket" action="order.php" enctype="multipart/form-data" method="post">
-            <label>
+            <div>
                 Введите ваше имя:
-                <input type="text" required><br/>
-            </label>
-            <br/>
-            <label>
+                <input type="text" placeholder="Имя" required><br/>
+            </div>
+
+            <div>
                 Введите ваш адресс электронной почты:
-                <input type="email" required>
-            </label>
-            <br/>
-            <label for="">
+                <input type="email" placeholder="email" required>
+            </div>
+
+            <div>
                 Выберите место:
                 <select>
                     <option value="Место№1">Место №1</option>
@@ -217,38 +236,32 @@
                     <option value="Место№9">Место №9</option>
                     <option value="Место№10">Место №10</option>
                 </select>
-            </label>
-            <br/>
-            <label>
+            </div>
+
+            <div>
                 Ваш комментарий:
                 <textarea cols="30" rows="10" placeholder="Комментарий"></textarea>
-            </label>
-            <br/>
-            <label>
-                <input type="file" name="File1">
-            </label>
-            <br/>
-            <label>
-                <input type="checkbox" name="option1" required>Я согласен на обработку персональных данных
-            </label>
-            <br/>
-            <label>
-                <input type="submit" value="Заказать">
-            </label>
-            <br/>
-            <label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="option1" name="option1" id="option1" required>
+                <label for="option1">
+                    <i class="icon icon-check" title="check"></i>
+                    Я согласен на обработку персональных данных
+                </label>
+            </div>
+
+            <div>
+                <input type="file" name="file1" id="file1">
+                    <label for="file1">
+                        Загрузить файл
+                    </label>
+            </div>
+
+            <div>
                 <button type="submit">Заказать</button>
-            </label>
-            <br/>
+            </div>
         </form>
-
-        <label>
-            <input type="submit" form="buyticket" value="Заказать"><br/>
-        </label>
-
-        <label>
-            <button type="submit" form="buyticket">Заказать</button><br/>
-        </label>
     </section>
 </body>
 </html>

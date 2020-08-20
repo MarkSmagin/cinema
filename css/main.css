@@ -1,26 +1,273 @@
-body{
-    font-family: 'Roboto', sans-serif;
+/** Общие стили */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 1.46vw;
 }
 
 a { 
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    text-decoration: none;
     color: #ffffff;
+    cursor: pointer;
 } 
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-.container{
-    max-width: 1030px;
-    margin: 0 auto;
+img {
+    max-width: 100%;
 }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    min-width: 20rem;
+    
+    margin-left: auto;
+    margin-right: auto;
+    color: #242424;
+    -webkit-text-size-adjust: 100%;
+}
+
+h3{
+    font-size: 2.1875rem;
+    font-weight: 900;
+}
+
+p{
+    font-size: 0.875rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+p + p{
+    margin-top: 1px;
+}
+
+form {
+    width: 25rem;
+}
+
+input, textarea, select {
+    font-size: 1.1875rem;
+    color: #6c6c6c;
+    padding: 0.9375rem 0.6875rem;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    width: 100%;
+    outline: 0;
+    transition: 0.2s;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../img/down-arrow.svg') 96% center / 5% no-repeat #fff;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-size: 1rem;
+    padding-left: 1.4375rem;
+    position: relative;
+    
+}
+
+input[type="radio"] + label i,
+input[type="checkbox"] + label i {
+    position: absolute;
+    display: none;
+    font-size: 0.6rem;
+    left: 0.1rem;
+    top: 0.15rem;
+    color: #90d23d;
+}
+
+input[type="checkbox"]:checked + label i{
+    display: block;
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 1px solid #000;
+}
+
+input[type="radio"] + label::before {
+    border-radius: 100%;
+}
+
+input[type="textarea"] {
+    height: 15.625rem;
+    resize: none;
+}
+
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    z-index: 1;
+    box-shadow: none;
+    border: 0;
+}
+
+input[type="file"] + label {
+    font-size: 1.125rem;
+    color: #90d23d;
+    position: relative;
+    border: 1px solid #90d23d;
+    padding: 0.9375rem;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="button"] + label,
+button {
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.button:hover{
+    color: #90d23d;
+    background: transparent;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 1.875rem;
+    font-size: 1.125rem;
+    color: #fff;
+    background-color: #90d23d;
+    border-radius: 0.9375rem;
+    transition: 0.2s;
+    border: 0.1rem solid #90d23d;
+    cursor: pointer;
+}
+  
+/** Сетка макета */
+.container{
+    max-width: 54rem;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+}
+/** Компоненты */
+/* Первый блок */
+.block-hat{
+    min-height: 100vh;
+    background: url("../img/top_bg.jpg") no-repeat top center / cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-hat__header{
+    padding: 2.2rem 0 0;
+}
+
+.block-hat__row{
+    overflow: hidden;
+}
+
+.block-hat__row > div{
+    display: inline-block;
+    padding: 0 0.75rem;
+    min-height: 1px;
+}
+
+
+.block-hat__logo img{
+    width: 9.3rem;
+}
+
+.block-hat__menu{
+    text-align: right;
+    margin-left: 4rem;
+}
+
+.block-hat__nav{
+    padding: 1.1rem 0 0;
+    text-align: right;
+}
+
+.block-hat__nav li{
+    display: inline-block;
+}
+
+.block-hat__nav li + li{
+    margin-left: 1rem;
+}
+
+.block-hat__nav a{
+    font-style: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.75rem;
+    transition: 0.2s;
+}
+
+.block-hat__nav a:hover{
+    color: green;
+}
+
+.block-hat__city{
+    margin-left: 4rem;
+    text-align: right;
+    color: #fff;
+}
+
+.city_choose span {
+    font-size: 0.75rem;
+    color: #ffffff;
+    font-weight: 100;
+  }
+  
+  .city_choose a {
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 0.75rem;
+  }
+
+.block-hat__main{
+    padding: 8rem 0 10rem;
+    text-align: center;
+    color: #fff;
+}
+
+.block-hat__h1{
+    font-size: 4rem;
+    margin-left: 0.3rem;
+    font-weight: 100;
+}
+
+.block-hat__h2{
+    font-size: 2.5rem;
+    padding-top: 0.6rem;
+}
+
 
 /* Стили для секции "Выберите фильм" */
 .movie-list__header{
     color: #252525;
-    font-size: 50px;
     text-align: center;
-    font-weight: 700;
     margin: 78px;
 }
 
