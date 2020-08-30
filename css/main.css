@@ -171,7 +171,7 @@ button {
 /** Компоненты */
 /* Первый блок Шапка */
 .block-hat{
-    min-height: 100vh;
+    min-height: 120vh;
     background: url("../img/top_bg.jpg") no-repeat top center / cover;
     position: relative;
     overflow: hidden;
@@ -254,14 +254,14 @@ button {
     font-size: 0.75rem;
     color: #ffffff;
     font-weight: 100;
-  }
+}
   
-  .city_choose a {
+.city_choose a {
     border-bottom: 0.0625rem solid #ffffff;
     color: #ffffff;
     font-weight: 100;
     font-size: 0.75rem;
-  }
+}
 
 .block-hat__main{
     padding: 8rem 0 18.2rem;
@@ -408,6 +408,7 @@ button {
 /* Таблица */
 .movie-list__table{
     width: 100%;
+    min-height: 80vh;
     border-collapse: collapse;
     border-radius: 15px;
     overflow: hidden;
@@ -432,9 +433,14 @@ button {
     font-size: 1.1rem;
 }
 
-.movie-list__row .movie-list__time{
-    padding-top: 1.4rem;
-    padding-bottom: 1.2852rem;
+.movie-list__vertical_align{
+    vertical-align: top;
+}
+
+.movie-list__cell_size{
+    padding-bottom: 1.1rem;
+    padding-top: 1.5rem;
+    line-height: calc(80vh / 5 - 2.6rem);
 }
 
 .movie-list__row_dark{
@@ -450,18 +456,18 @@ button {
 }
 
 .movie-list__time{
-    padding-right: 2.4rem;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 }
 
 .movie-list__name{
     text-align: left;
-    padding-left: 2.4rem;
+    padding-left: 5.5rem;
 }
 
 
 .movie-list__plus{ 
-    padding-right: 2rem;
+    width: 6.3rem;
+    padding-top: 1rem;
 }
 
 .movie-list__plus img{
@@ -474,7 +480,6 @@ button {
 
 /* Четвертый блок "Подарок каждому" */
 .block-gift{
-    min-height: 100vh;
     background: url("../img/ticket.jpg") no-repeat top center / cover;
     position: relative;
     padding: 6.93rem 0 8.7rem;
@@ -660,11 +665,18 @@ button {
 }
 
 .block-footer__links a + a {
-    margin-left: 0.25rem;
+    margin-left: 0.3rem;
 }
 
 .block-footer__links svg{
-    width: 2.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #fff;
+    transition: .2s;
+}
+
+.block-footer__links a:hover svg{
+    filter: none;
 }
 
 .block-footer__text{
