@@ -591,14 +591,15 @@ button {
     background-color: rgb(144, 210, 61, .5);
     left: 0;
     right: 0;
-    top: 100%;
+    top: 0;
     bottom: 0;
     padding: 1.1rem;
     transition: 0.3s;
+    transform: translateY(100%);
 }
 
 .block-movies__relative:hover .movie{
-    top: 0;
+    transform: translateY(0);
 }
 
 .movie__bg{
