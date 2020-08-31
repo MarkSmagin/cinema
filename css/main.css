@@ -538,7 +538,7 @@ button {
     margin: 0 0 2.9rem;
 }
 
-.blovk-gift__paragraph{
+.block-gift__paragraph{
     margin: 0 0 .8rem;
 }
 
@@ -675,8 +675,8 @@ button {
     transition: .2s;
 }
 
-.block-footer__links a:hover svg{
-    filter: none;
+.block-footer__links a:hover svg filter{
+    display: none;
 }
 
 .block-footer__text{
