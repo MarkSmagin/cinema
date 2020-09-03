@@ -280,9 +280,9 @@ button {
     padding-top: 0.5625rem;
 }
 
-/* Второй блок */
+/* Второй блок "Почему мы? */
 .block-whywe{
-    padding: 4rem 0 1rem;
+    padding: 3.9rem 0 1rem;
 }
 
 .block-whywe__welcome{
@@ -309,88 +309,53 @@ button {
     margin: 0 0 0.76rem;
 }
 
+.whywe__text_align{
+    text-align: center;
+}
+
 .whywe__header{
     font-size: 2.5rem;
     margin: 0 0 6.2rem;
 }
 
 .whywe{
-    margin: 0 -1.5rem;
-    text-align: center;
-}
-
-.whywe__row{
-    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .whywe__plus{
-    float: left;
-    width: 33.33%;
-    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 30%;
+    margin-bottom: 2rem;
 }
 
 .whywe__img{
-    margin: 0 0 2rem;
-    height: 10.4rem;
-    position: relative;
+    margin-bottom: 2rem;
+    height: 10.55rem;
     transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whywe__img:hover{
     transform: scale(1.07);
-
 }
 
 .whywe__img img{
-    height: 10.4rem;
-}
-
-.whywe__img_screens{
-    max-width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.whywe__img_sounds{
-    max-width: 100%;
-    position: absolute;
-    left: 1.5rem;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.whywe__img_chairs{
-    max-width: 100%;
-    position: absolute;
-    left: .5rem;
-    right: 0;
-    top: 1.3rem;
-    bottom: 0;
-    margin: auto;
-}
-
-.whywe__img .whywe__img_chairs{
-    height: 9rem;
+    display: block;
+    height: 100%;
 }
 
 .whywe__h3{
+    text-align: center;
     font-size: 1.75rem;
     font-weight: 900;
-    margin: 0 0 1rem;
-}
-
-.whywe__h3_chairs{
-    padding-left: 0.7rem;
-}
-
-.clear{
-    clear: both;
+    margin-bottom: .85rem;
+    flex: 1;
 }
 
 /* Третий блок "Выберите фильм" */
@@ -566,54 +531,59 @@ button {
 }
 
 .block-movies__text{
-    max-width: 70%;
+    max-width: 69%;
+}
+
+.block-movies_container{
+    padding: 0 1rem;
 }
 
 .block-movies__inner{
-    width: 100%;
-    border-collapse: collapse;
-    margin: -.1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    justify-content: center;
 }
 
 .block-movies__movie{
-    padding: 1rem 1.3rem;
+    flex: 0 0 31.5%;
+    padding: 1rem;
 }
 
 .block-movies__relative{
     position: relative;
-    border-radius: .6rem;
     overflow: hidden;
-    width: 14.7rem;
-    height: 14.7rem;
-}
-
-.block-movies__relative img{
-    width: 100%;
-}
-
-.movie{
-    position: absolute;
-    background-color: rgb(144, 210, 61, .5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 1.1rem;
-    transition: 0.3s;
-    transform: translateY(100%);
-}
-
-.block-movies__relative:hover .movie{
-    transform: translateY(0);
+    border-radius: .75rem;
 }
 
 .movie__bg{
     display: block;
 }
 
-.movie__wrap{
-    height: 100%;
+.movie__bg img{
+    width: 100%;
 }
+
+.movie__descr{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(144, 210, 61, .5);
+    display: flex;
+    flex-direction: column;
+    border-radius: .75rem;
+    overflow: hidden;
+    padding: 1.2rem;
+    transition: .3s;
+    transform: translateY(100%);
+}
+
+.block-movies__relative:hover .movie__descr{
+    transform: translateY(0);
+}
+
 .movie__name{
     color: #fff;
     font-size: 1.8rem;
@@ -632,12 +602,8 @@ button {
     font-size: 1rem;
     font-weight: 500;
     color: #fff;
+    flex: 1;
 }   
-
-.movie__links{
-    position: absolute;
-    top: 12rem;
-}
 
 .movie__links a{
     display: inline-block;
@@ -651,6 +617,15 @@ button {
     line-height: 1.5rem;
 }
 
+/* Карта */
+.block-map{
+    height: 22.5rem;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+}
 
 /* Подвал сайта */
 .block-footer{
