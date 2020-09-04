@@ -522,7 +522,7 @@ button {
 
 .block-movies__header{
     margin-left: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.9rem;
 }
 
 .block-movies__h2{
@@ -539,15 +539,19 @@ button {
 }
 
 .block-movies__inner{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1rem;
+    display: grid;
+    grid-template-columns: 14.7rem 14.7rem 14.7rem;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
     justify-content: center;
 }
 
-.block-movies__movie{
-    flex: 0 0 31.5%;
-    padding: 1rem;
+.block-movies__movie_left{
+    grid-column: 1 / 2;
+}
+
+.block-movies__movie_right{
+    grid-column: 3 / 4;
 }
 
 .block-movies__relative{
