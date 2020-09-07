@@ -654,8 +654,8 @@ button {
     transition: .2s;
 }
 
-.block-footer__links a:hover svg filter{
-    display: none;
+.block-footer__links a:hover svg g{
+    filter: none;
 }
 
 .block-footer__text{
