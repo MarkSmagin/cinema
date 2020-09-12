@@ -1,0 +1,345 @@
+@media screen and (max-width:1200px)
+{
+    html{
+        font-size: 1.86vw;
+    }
+
+    .block-gift__box {
+        left: 3.5rem;
+    }
+}
+
+@media screen and (max-width:850px)
+{
+    html{
+        font-size: 2.86vw;
+    }
+
+    .block-hat__city{
+        display: none;
+    }
+
+    .menu__burger{
+        position: relative;
+        width: 1.3rem;
+        height: 1.3rem;
+        overflow: hidden;
+    }
+
+    .menu__burger::before,
+    .menu__burger::after,
+    .menu__burger span{
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 0.1rem;
+        background: #fff;
+        transition: .2s;
+    }
+
+    .menu__burger span{
+        top: 50%;
+        margin-top: -0.05rem;
+    }
+
+    .menu__burger::after{
+        bottom: 0;
+    }
+
+    .menu__burger_opened span{
+        opacity: 0;
+    }
+
+    .menu__burger_opened{
+        background: rgba(0, 0, 0, .9);
+        padding: .5rem;
+        margin: -.5rem -.8rem 0;
+    }
+
+    .block-hat__nav{
+        position: fixed;
+        right: 0;
+        padding: 2rem;
+        background: rgba(0, 0, 0, .9);
+        z-index: 100;
+        text-align: left;
+        transform: translateX(100%);
+        transition: .2s;
+    }
+    
+    .block-hat__nav li{
+        display: block;
+    }
+
+    .block-hat__nav li + li{
+        margin-left: 0;
+        margin-top: .7rem;
+    }
+
+    .block-hat__nav_closed{
+        transform: translateX(-100%);
+    }
+    
+    .block-hat__menu{
+        width: auto;
+    }
+
+    .block-hat__logo{
+        width: auto;
+        flex: 1;
+    }
+
+    .block-hat__h1{
+        font-size: 3rem;
+    }
+
+    .welcome__h2 {
+        font-size: 2.5rem;
+    }
+
+    .block-hat__h2 {
+        font-size: 2.4rem;
+    }
+
+    .block-moviel-list__wrap{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .movie-list__table{
+        min-width: 50rem;
+    }
+
+    .block-movies__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .block-movies__movie_right {
+        grid-column: 2 / 3;
+    }
+
+    .block-gift__box {
+        left: 0.5rem;
+        top: 1.6rem;
+    }
+
+    .block-gift__box img {
+        width: 9.5rem;
+        height: 9.5rem;
+    }
+
+    .block-gift__text {
+        width: 100%;
+    }
+
+    .block-movies__text {
+        max-width: 100%;
+    }
+
+    .welcome {
+        position: static;
+        width: 100%;
+    }  
+    
+    .block-whywe {
+        padding: 0.9rem 0 1rem;
+    }
+
+    .whywe__header {
+        margin: 3rem 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .whywe__h3 {
+        flex: 0;
+    }
+
+    .whywe {
+        margin: 0 -.5rem;
+    }
+
+    .whywe__plus {
+        padding: 0 .5rem;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .whywe{
+        display: block;
+        margin: 0 -.5rem;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .whywe__row{
+        padding: .5rem 0;
+    }
+    
+    .whywe__plus{
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .whywe__img{
+        margin: 0 0 2rem;
+        height: 10.4rem;
+        position: relative;
+        transition: .2s;
+    }
+    
+    .whywe__img:hover{
+        transform: scale(1.07);
+    
+    }
+    
+    .whywe__img img{
+        height: 10.4rem;
+    }
+    
+    .whywe__img_screens{
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .whywe__img_sounds{
+        max-width: 100%;
+        position: absolute;
+        left: 1.5rem;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .whywe__img_chairs{
+        max-width: 100%;
+        position: absolute;
+        left: .5rem;
+        right: 0;
+        top: 1.3rem;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .whywe__img .whywe__img_chairs{
+        height: 9rem;
+    }
+    
+    .whywe__h3{
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin: 0 0 1rem;
+    }
+    
+    .whywe__h3_chairs{
+        padding-left: 0.7rem;
+    }
+    
+    .clear{
+        clear: both;
+    }
+}
+@media screen and (max-width:320px)
+{
+    .block-hat:after{
+        border-left: 320px solid transparent;
+    }
+
+    .block-gift:before{
+        border-right: 320px solid transparent;
+    }
+
+    .block-gift::after{
+        border-left: 320px solid transparent;
+    }
+
+    .welcome__h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .whywe__h3 {
+        font-size: 2.75rem;
+    }
+
+    .whywe__img img {
+        height: 100%;
+    }
+
+    .whywe__img {
+        margin: 0 0 2rem;
+        height: 17.4rem;
+    }    
+
+    .whywe__img .whywe__img_chairs {
+        height: 15rem;
+    }
+
+    .block-hat {
+        min-height: 55vh;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    .block-gift__h2 {
+        font-size: 2.5rem;
+    }
+
+    .movie__name {
+        font-size: 2rem;
+    }
+
+    .movie__sep {
+        height: 0.5rem;
+    }
+
+    .movie__text {
+        font-size: 1.2rem;
+    }
+
+    .block-footer__links svg {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+
+    .block-footer__row {
+        font-size: 1.4rem;
+    }
+
+    .movie-list__thead {
+        font-size: 2.5rem;
+    }
+
+    .movie-list__row {
+        font-size: 2.2rem;
+    }
+
+    .movie-list__table {
+        min-width: 100rem;
+    }
+    
+    .movie-list__plus {
+        width: 11.3rem;
+    }
+    
+    .movie-list__plus img {
+        width: 4.6rem;
+    }
+}
+

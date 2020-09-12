@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/media.css">
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
@@ -22,14 +23,17 @@
                     </div>
 
                     <div class="block-hat__menu">
-                        <nav class="block-hat__nav">
-                            <ul>
-                                <li><a href="#selectmovie">заказать билет</a></li>
-                                <li><a href="#whywe">преимущества</a></li>
-                                <li><a href="#movies">фильмы</a></li>
-                                <li><a href="#contacts">контакты</a></li>
-                            </ul>
-                        </nav>
+                        <div class="menu__wrap">
+                            <div class="menu__burger"><span></span></div>
+                            <nav class="block-hat__nav">
+                                <ul>
+                                    <li><a href="#selectmovie">заказать билет</a></li>
+                                    <li><a href="#whywe">преимущества</a></li>
+                                    <li><a href="#movies">фильмы</a></li>
+                                    <li><a href="#contacts">контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
     
                     <div class="block-hat__city">
@@ -88,6 +92,8 @@
                     <p class="whywe__text whywe__text_align">Gather round fellow authors! Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.</p>
                 </div>
 
+                <div class="clear whywe__row"></div> 
+
                 <div class="whywe__plus">
                     <div class="whywe__img">
                         <img class="whywe__img_screens" src="img/b2_icon_1.jpg" alt="">
@@ -112,6 +118,7 @@
                     <p class="whywe__text whywe__text_align">Gather round fellow authors! Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.</p>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
     </div>
     <!-- Конец секции Почему мы?-->
@@ -120,35 +127,37 @@
     <div class="block-movie-list">
         <div class="container">
             <h2 class="movie-list__h2" id="selectmovie">Выберите фильм</h2>
-            <table class="movie-list__table">
-                <tbody>
-                    <tr class="movie-list__thead">
-                        <td class="movie-list__time movie-list__cell_size movie-list__vertical_align"><a href="#">Time<i class="fa fa-caret-down"></i></a></td>
-                        <td class="movie-list__name movie-list__cell_size movie-list__vertical_align"><a href="#">Stuff that will happen<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
-                        <td></td>
-                    </tr>
-                    <tr class="movie-list__row movie-list__row_dark">
-                        <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">10am - 12pm</td>
-                        <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Introduction and presentations about Envato</td>
-                        <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
-                    </tr>
-                    <tr class="movie-list__row movie-list__row_light">
-                        <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">12pm - 02pm</td>
-                        <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Sessions by honorable guests and Speakers</td>
-                        <td class="movie-list__plus movie-list__cell_size movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
-                    </tr>
-                    <tr class="movie-list__row movie-list__row_third">
-                        <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">02pm - 03pm</td>
-                        <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Break and Mingle time with the authors</td>
-                        <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
-                    </tr>
-                    <tr class="movie-list__row movie-list__row_light">
-                        <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">03pm - 05pm</td>
-                        <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Portfolio Review, Rewards and Ending Presentation</td>
-                        <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="block-moviel-list__wrap">
+                <table class="movie-list__table">
+                    <tbody>
+                        <tr class="movie-list__thead">
+                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align"><a href="#">Time<i class="fa fa-caret-down"></i></a></td>
+                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align"><a href="#">Stuff that will happen<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="movie-list__row movie-list__row_dark">
+                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">10am - 12pm</td>
+                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Introduction and presentations about Envato</td>
+                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__row movie-list__row_light">
+                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">12pm - 02pm</td>
+                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Sessions by honorable guests and Speakers</td>
+                            <td class="movie-list__plus movie-list__cell_size movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__row movie-list__row_third">
+                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">02pm - 03pm</td>
+                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Break and Mingle time with the authors</td>
+                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                        <tr class="movie-list__row movie-list__row_light">
+                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">03pm - 05pm</td>
+                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Portfolio Review, Rewards and Ending Presentation</td>
+                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p class="movie-list__footer">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae,<br/>
                 delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!

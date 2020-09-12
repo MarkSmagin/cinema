@@ -30,7 +30,7 @@ body{
 }
 
 h2{
-    font-size: 3.125rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -193,10 +193,11 @@ button {
 .block-hat__row{
     overflow: hidden;
     margin: 0 -0.75rem;
+    display: flex;
+    align-items: center;
 }
 
 .block-hat__row > div{
-    float: left;
     padding: 0 0.75rem;
     min-height: 1px;
 }
@@ -314,7 +315,6 @@ button {
 }
 
 .whywe__header{
-    font-size: 2.5rem;
     margin: 0 0 6.2rem;
 }
 
@@ -328,7 +328,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 30%;
+    flex: 0 0 33%;
     margin-bottom: 2rem;
 }
 
@@ -367,7 +367,6 @@ button {
     color: #252525;
     text-align: center;
     margin: 0 0 4.1rem;
-    font-size: 2.5rem;;
 }
 
 /* Таблица */
@@ -499,7 +498,6 @@ button {
 }
 
 .block-gift__h2{
-    font-size: 2.5rem;
     margin: 0 0 2.9rem;
 }
 
@@ -526,7 +524,6 @@ button {
 }
 
 .block-movies__h2{
-    font-size: 2.5rem;
     margin-bottom: 1.9rem;
 }
 
