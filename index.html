@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
@@ -131,29 +133,29 @@
                 <table class="movie-list__table">
                     <tbody>
                         <tr class="movie-list__thead">
-                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align"><a href="#">Time<i class="fa fa-caret-down"></i></a></td>
-                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align"><a href="#">Stuff that will happen<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
-                            <td></td>
+                            <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
+                            <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
+                            <td class="movie-list__genre movie-list__cell_size">Жанр</td>
                         </tr>
                         <tr class="movie-list__row movie-list__row_dark">
-                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">10am - 12pm</td>
-                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Introduction and presentations about Envato</td>
-                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                            <td id="film_start_1" class="movie-list__time movie-list__cell_size"></td>
+                            <td id="film_name_1" class="movie-list__name movie-list__cell_size"></td>
+                            <td id="film_genre_1" class="movie-list__genre movie-list__cell_size"></td>
                         </tr>
                         <tr class="movie-list__row movie-list__row_light">
-                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">12pm - 02pm</td>
-                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Sessions by honorable guests and Speakers</td>
-                            <td class="movie-list__plus movie-list__cell_size movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                            <td id="film_start_2" class="movie-list__time movie-list__cell_size"></td>
+                            <td id="film_name_2" class="movie-list__name movie-list__cell_size"></td>
+                            <td id="film_genre_2" class="movie-list__genre movie-list__cell_size"></td>
                         </tr>
                         <tr class="movie-list__row movie-list__row_third">
-                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">02pm - 03pm</td>
-                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Break and Mingle time with the authors</td>
-                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                            <td id="film_start_3" class="movie-list__time movie-list__cell_size"></td>
+                            <td id="film_name_3" class="movie-list__name movie-list__cell_size"></td>
+                            <td id="film_genre_3" class="movie-list__genre movie-list__cell_size"></td>
                         </tr>
                         <tr class="movie-list__row movie-list__row_light">
-                            <td class="movie-list__time movie-list__cell_size movie-list__vertical_align">03pm - 05pm</td>
-                            <td class="movie-list__name movie-list__cell_size movie-list__vertical_align">Portfolio Review, Rewards and Ending Presentation</td>
-                            <td class="movie-list__plus movie-list__cell_size movie-list__vertical_align"><img src="img/Button-plus.png" alt="Кнопка плюс"></td>
+                            <td id="film_start_4" class="movie-list__time movie-list__cell_size"></td>
+                            <td id="film_name_4" class="movie-list__name movie-list__cell_size"></td>
+                            <td id="film_genre_4" class="movie-list__genre movie-list__cell_size"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -200,7 +202,7 @@
                 <p class="block-movies__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</p>
             </div>
            
-            <div class="block-movies__inner">
+            <div class="block-movies__inner owl-carousel">
                 <div class="block-movies__movie block-movies__movie_left">
                     <div class="block-movies__relative">
                         <div class="movie__bg">
@@ -518,6 +520,9 @@
             </div>
         </form>
     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
 

@@ -389,8 +389,7 @@ button {
 }
 
 .movie-list__thead td{
-    padding-top: 1.14rem;
-    padding-bottom: 1.1rem;
+    padding-top: 1.1rem;
 }
 
 .movie-list__row{
@@ -402,8 +401,8 @@ button {
 }
 
 .movie-list__cell_size{
-    padding-bottom: 1.1rem;
-    padding-top: 1.5rem;
+    padding-bottom: 1.3rem;
+    padding-top: 1.3rem;
     line-height: calc(80vh / 5 - 2.6rem);
 }
 
@@ -419,24 +418,15 @@ button {
     background-color: #6c6c6c;
 }
 
-.movie-list__time{
-    padding-left: 1.5rem;
+.movie-list__genre{
+    text-align: left;
+    padding-left: .5rem;
 }
 
 .movie-list__name{
     text-align: left;
-    padding-left: 5.5rem;
+    padding-left: .5rem;
 }
-
-
-.movie-list__plus{ 
-    width: 6.3rem;
-    padding-top: 1rem;
-}
-
-.movie-list__plus img{
-    width: 1.6rem;
-} 
 
 .movie-list__footer{
     text-align: center;
@@ -543,6 +533,10 @@ button {
     justify-content: center;
 }
 
+.block-movies__movie{
+    margin: 0 .5rem;
+}
+
 .block-movies__movie_left{
     grid-column: 1 / 2;
 }
@@ -587,7 +581,7 @@ button {
 
 .movie__name{
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 900;
     margin-bottom: .5rem;
 }

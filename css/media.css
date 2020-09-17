@@ -114,6 +114,21 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .movie__name{
+        font-size: .9rem;
+        margin-bottom: .1rem;
+    }
+
+    .movie__sep{
+        width: 4.2rem;
+        height: .2rem;
+        margin: .3rem 0;
+    }
+
+    .movie__text{
+        font-size: .6rem;
+    }  
+
     .block-movies__movie_right {
         grid-column: 2 / 3;
     }
@@ -163,6 +178,22 @@
 
     .whywe__plus {
         padding: 0 .5rem;
+    }
+
+    .owl-nav{
+        font-size: 5rem;
+    }
+    
+    .owl-nav button.owl-prev{
+        position: absolute;
+        left: -1.2rem;
+        top: 2rem;
+    }
+    
+    .owl-nav button.owl-next{
+        position: absolute;
+        right: -1.2rem;
+        top: 2rem;
     }
 }
 
@@ -340,6 +371,21 @@
     
     .movie-list__plus img {
         width: 4.6rem;
+    }
+
+    .movie__name{
+        font-size: .9rem;
+        margin-bottom: .1rem;
+    }
+
+    .movie__sep{
+        width: 4.2rem;
+        height: .2rem;
+        margin: .3rem 0;
+    }
+
+    .movie__text{
+        font-size: .7rem;
     }
 }
 
