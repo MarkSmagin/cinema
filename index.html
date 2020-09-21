@@ -466,63 +466,66 @@
     <!-- Конец Подвала сайта -->
 
     <!-- Форма -->
-    <div class="form">
+    <div class="block_form">
         <h2>Заказать билет</h2>
-        <form id="buyticket" action="order.php" enctype="multipart/form-data" method="post">
-            <div>
-                Введите ваше имя:
-                <input type="text" placeholder="Имя" required><br/>
-            </div>
-
-            <div>
-                Введите ваш адресс электронной почты:
-                <input type="email" placeholder="email" required>
-            </div>
-
-            <div>
-                Выберите место:
-                <select>
-                    <option value="Место№1">Место №1</option>
-                    <option value="Место№2">Место №2</option>
-                    <option value="Место№3">Место №3</option>
-                    <option value="Место№4">Место №4</option>
-                    <option value="Место№5">Место №5</option>
-                    <option value="Место№6">Место №6</option>
-                    <option value="Место№7">Место №7</option>
-                    <option value="Место№8">Место №8</option>
-                    <option value="Место№9">Место №9</option>
-                    <option value="Место№10">Место №10</option>
-                </select>
-            </div>
-
-            <div>
-                Ваш комментарий:
-                <textarea cols="30" rows="10" placeholder="Комментарий"></textarea>
-            </div>
-
-            <div>
-                <input type="checkbox" class="option1" name="option1" id="option1" required>
-                <label for="option1">
-                    <i class="icon icon-check" title="check"></i>
-                    Я согласен на обработку персональных данных
-                </label>
-            </div>
-
-            <div>
-                <input type="file" name="file1" id="file1">
-                    <label for="file1">
-                        Загрузить файл
+        <form id="form" action="">
+            <div class="block_form__inner">
+                <div>
+                    Введите ваше имя:
+                    <input type="text" placeholder="Имя" id="name" required><br/>
+                </div>
+    
+                <div>
+                    Введите ваш адресс электронной почты:
+                    <input type="email" placeholder="email" required>
+                </div>
+    
+                <div>
+                    Выберите место:
+                    <select name="select" id="select">
+                        <option value="Место№1">Место №1</option>
+                        <option value="Место№2">Место №2</option>
+                        <option value="Место№3">Место №3</option>
+                        <option value="Место№4">Место №4</option>
+                        <option value="Место№5">Место №5</option>
+                        <option value="Место№6">Место №6</option>
+                        <option value="Место№7">Место №7</option>
+                        <option value="Место№8">Место №8</option>
+                        <option value="Место№9">Место №9</option>
+                        <option value="Место№10">Место №10</option>
+                    </select>
+                </div>
+    
+                <div>
+                    Ваш комментарий:
+                    <textarea id="textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                </div>
+    
+                <div>
+                    <input type="checkbox" class="option1" name="option1" id="checkbox" required>
+                    <label for="option1">
+                        <i class="icon icon-check" title="check"></i>
+                        Я согласен на обработку персональных данных
                     </label>
-            </div>
-
-            <div>
-                <button type="submit">Заказать</button>
+                </div>
+    
+                <div>
+                    <input type="file" name="file1" id="file1">
+                        <label for="file1">
+                            Загрузить файл
+                        </label>
+                </div>
+    
+                <div>
+                    <button id="submit" type="submit">Заказать</button>
+                </div>
             </div>
         </form>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/films.js"></script>
 </body>
 </html>
 
