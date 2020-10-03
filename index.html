@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
+    
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -130,34 +131,12 @@
         <div class="container">
             <h2 class="movie-list__h2" id="selectmovie">Выберите фильм</h2>
             <div class="block-moviel-list__wrap">
-                <table class="movie-list__table">
-                    <tbody>
-                        <tr class="movie-list__thead">
-                            <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
-                            <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
-                            <td class="movie-list__genre movie-list__cell_size">Жанр</td>
-                        </tr>
-                        <tr class="movie-list__row movie-list__row_dark">
-                            <td id="film_start_1" class="movie-list__time movie-list__cell_size"></td>
-                            <td id="film_name_1" class="movie-list__name movie-list__cell_size"></td>
-                            <td id="film_genre_1" class="movie-list__genre movie-list__cell_size"></td>
-                        </tr>
-                        <tr class="movie-list__row movie-list__row_light">
-                            <td id="film_start_2" class="movie-list__time movie-list__cell_size"></td>
-                            <td id="film_name_2" class="movie-list__name movie-list__cell_size"></td>
-                            <td id="film_genre_2" class="movie-list__genre movie-list__cell_size"></td>
-                        </tr>
-                        <tr class="movie-list__row movie-list__row_third">
-                            <td id="film_start_3" class="movie-list__time movie-list__cell_size"></td>
-                            <td id="film_name_3" class="movie-list__name movie-list__cell_size"></td>
-                            <td id="film_genre_3" class="movie-list__genre movie-list__cell_size"></td>
-                        </tr>
-                        <tr class="movie-list__row movie-list__row_light">
-                            <td id="film_start_4" class="movie-list__time movie-list__cell_size"></td>
-                            <td id="film_name_4" class="movie-list__name movie-list__cell_size"></td>
-                            <td id="film_genre_4" class="movie-list__genre movie-list__cell_size"></td>
-                        </tr>
-                    </tbody>
+                <table id="filmsTable" class="movie-list__table">
+                    <tr class="movie-list__thead">
+                        <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
+                        <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
+                        <td class="movie-list__genre movie-list__cell_size">Жанр</td>
+                    </tr>
                 </table>
             </div>
             <p class="movie-list__footer">
@@ -187,7 +166,7 @@
             </div>
             
             <div class="block-gift__button">
-                <a class="button button__take-gift" href="#">Получить подарок</a> 
+                <a id="form_open" class="button button__take-gift" href="#">Получить подарок</a> 
             </div>
         </div>
     </div>
@@ -201,127 +180,7 @@
 
                 <p class="block-movies__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!</p>
             </div>
-           
-            <div class="block-movies__inner owl-carousel">
-                <div class="block-movies__movie block-movies__movie_left">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov1.jpg" alt="Человек-паук">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Человек-паук
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="block-movies__movie block-movies__movie_right">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov2.jpg" alt="Собачья жизнь 2">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Собачья жизнь 2
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="block-movies__movie block-movies__movie_left">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov3.jpg" alt="Люди в черном: Интернэшнл">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Люди в черном: Интернэшнл
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block-movies__movie block-movies__movie_right">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov1.jpg" alt="Человек-паук">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Человек-паук
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="block-movies__movie block-movies__movie_left">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov2.jpg" alt="Собачья жизнь 2">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Собачья жизнь 2
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="block-movies__movie block-movies__movie_right">
-                    <div class="block-movies__relative">
-                        <div class="movie__bg">
-                            <img src="img/mov3.jpg" alt="Люди в черном: Интернэшнл">
-                        </div>
-                        <div class="movie__descr">
-                            <div class="movie__name">
-                                Люди в черном: Интернэшнл
-                            </div>
-                            <div class="movie__sep"></div>
-                            <div class="movie__text">Lorem ipsum dolor sit amet, consectetur</div>
-                            <div class="movie__links">
-                                <a href="#" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="#" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="#"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="filmsBlock" class="block-movies__inner owl-carousel">
             </div>
         </div>
     </div>
@@ -466,50 +325,57 @@
     <!-- Конец Подвала сайта -->
 
     <!-- Форма -->
-    <div class="block_form">
-        <h2>Заказать билет</h2>
-        <form id="form" action="">
-            <div class="block_form__inner">
-                <div>
-                    Введите ваше имя:
+    <div id="popup" class="block_form hidden">
+        <div class="container">
+            <form class="order_form" id="form1" action="">
+                <div id="form_close" class="close">
+                    <i class="icon icon-cross" title="cross"></i>
+                </div>
+                <h2>Заказать билет</h2>
+                <div class="input_wrap">
+                    <p>Введите ваше имя:</p>
                     <input type="text" placeholder="Имя" id="name" required><br/>
+                    <div class="form_error_massage"></div>
                 </div>
     
-                <div>
-                    Введите ваш адресс электронной почты:
-                    <input type="email" placeholder="email" required>
+                <div class="input_wrap">
+                    <p>Введите ваш адресс электронной почты:</p>
+                    <input id="email" type="email" placeholder="email" required>
+                    <div class="form_error_massage"></div>
                 </div>
     
-                <div>
-                    Выберите место:
+                <div class="input_wrap">
+                    <p>Выберите место:</p>
                     <select name="select" id="select">
-                        <option value="Место№1">Место №1</option>
-                        <option value="Место№2">Место №2</option>
-                        <option value="Место№3">Место №3</option>
-                        <option value="Место№4">Место №4</option>
-                        <option value="Место№5">Место №5</option>
-                        <option value="Место№6">Место №6</option>
-                        <option value="Место№7">Место №7</option>
-                        <option value="Место№8">Место №8</option>
-                        <option value="Место№9">Место №9</option>
-                        <option value="Место№10">Место №10</option>
+                        <option value="0"></option>
+                        <option value="1">Место №1</option>
+                        <option value="2">Место №2</option>
+                        <option value="3">Место №3</option>
+                        <option value="4">Место №4</option>
+                        <option value="5">Место №5</option>
+                        <option value="6">Место №6</option>
+                        <option value="7">Место №7</option>
+                        <option value="8">Место №8</option>
+                        <option value="9">Место №9</option>
+                        <option value="10">Место №10</option>
                     </select>
+                    <div class="form_error_massage"></div>
                 </div>
     
-                <div>
-                    Ваш комментарий:
-                    <textarea id="textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                <div class="input_wrap">
+                    <p>Ваш комментарий:</p>
+                    <textarea class="textarea" id="textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
                 </div>
     
-                <div>
-                    <input type="checkbox" class="option1" name="option1" id="checkbox" required>
-                    <label for="option1">
-                        <i class="icon icon-check" title="check"></i>
-                        Я согласен на обработку персональных данных
+                <div class="input_wrap">
+                    <input type="checkbox" class="option1" name="option1" id="agree" required>
+                    <label for="agree">
+                        <i class="icon icon-check" title="check"></i><p>Я согласен на обработку персональных данных</p>
                     </label>
+                    <div class="form_error_massage"></div>
                 </div>
     
-                <div>
+                <div class="input_wrap">
                     <input type="file" name="file1" id="file1">
                         <label for="file1">
                             Загрузить файл
@@ -517,11 +383,11 @@
                 </div>
     
                 <div>
-                    <button id="submit" type="submit">Заказать</button>
+                    <input class="form_button" id="submit" type="submit" value="Заказать">
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </div>  
     <script src="js/jquery.js"></script>
     <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>

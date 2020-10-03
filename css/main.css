@@ -46,16 +46,12 @@ p{
     line-height: 1.25;
 }
 
-.form {
-    width: 400px;
-}
-
 input, textarea, select {
-    font-size: 19px;
+    font-size: .6rem;
     color: #6c6c6c;
-    padding: 15px 11px;
-    border: 1px solid #bebebe;
-    border-radius: 5px;
+    padding: 0.1rem .3rem;
+    border: .05rem solid #bebebe;
+    border-radius: .25rem;
     width: 100%;
     outline: 0;
     transition: 0.2s;
@@ -75,8 +71,7 @@ input[type="checkbox"] {
 
 input[type="radio"] + label,
 input[type="checkbox"] + label {
-    font-size: 16px;
-    padding-left: 23px;
+    font-size: .5rem;
     position: relative;
     
 }
@@ -85,9 +80,9 @@ input[type="radio"] + label i,
 input[type="checkbox"] + label i {
     position: absolute;
     display: none;
-    font-size: 9px;
-    left: 1px;
-    top: 2px;
+    font-size: .4rem;
+    left: .05rem;
+    top: .1rem;
     color: #90d23d;
 }
 
@@ -100,49 +95,56 @@ input[type="checkbox"] + label::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 1px;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #000;
+    top: .05rem;
+    width: .5rem;
+    height: .5rem;
+    border: .05rem solid #000;
 }
 
 input[type="radio"] + label::before {
     border-radius: 100%;
 }
 
-input[type="textarea"] {
-    height: 250px;
+.textarea {
+    height: 5rem;
     resize: none;
+
 }
 
 input[type="file"] {
     position: absolute;
     opacity: 0;
-    width: 1px;
-    height: 1px;
+    width: .05rem;
+    height: .05rem;
     z-index: 1;
     box-shadow: none;
     border: 0;
 }
 
 input[type="file"] + label {
-    font-size: 18px;
+    font-size: .5rem;
     color: #90d23d;
     position: relative;
-    border: 1px solid #90d23d;
-    padding: 15px;
+    border: .05rem solid #90d23d;
+    padding: .3rem;
     z-index: 2;
     background: #fff;
     width: 100%;
-    display: block;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: .25rem;
 }
 
 input[type="button"] + label,
 button {
-    border-right: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    display: inline-block;
+    background: #90d23d;
+    color: #ffffff;
+    padding: 0.3rem .5rem;
+    border-radius: 0.6rem;
+    font-size: 0.5rem;
+    transition: 0.2s;
+    border: 0.1rem solid #90d23d;
+    cursor: pointer;
 }
 
 .button:hover{
@@ -371,7 +373,6 @@ button {
 /* Таблица */
 .movie-list__table{
     width: 100%;
-    min-height: 80vh;
     border-collapse: collapse;
     border-radius: 15px;
     overflow: hidden;
@@ -387,10 +388,6 @@ button {
     font-weight: 900;
 }
 
-.movie-list__thead td{
-    padding-top: 1.1rem;
-}
-
 .movie-list__row{
     font-size: 1.1rem;
 }
@@ -402,7 +399,6 @@ button {
 .movie-list__cell_size{
     padding-bottom: 1.3rem;
     padding-top: 1.3rem;
-    line-height: calc(80vh / 5 - 2.6rem);
 }
 
 .movie-list__row_dark{
@@ -556,6 +552,7 @@ button {
 
 .movie__bg img{
     width: 100%;
+    height: 17rem;
 }
 
 .movie__descr{
@@ -580,7 +577,7 @@ button {
 
 .movie__name{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
     margin-bottom: .5rem;
 }
@@ -655,4 +652,84 @@ button {
 
 .block-footer__row{
     font-size: .9rem;
+}
+
+/* Форма */
+.block_form{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 2;
+}
+
+.hidden{
+    display: none;
+}
+
+.order_form{
+    background: rgb(255, 255, 255);
+    border-radius: .7rem;
+    box-shadow: .05rem 0rem .25rem rgb(125, 125, 125);
+    box-sizing: border-box;
+    width: 16rem;
+    padding: .6rem;
+    margin: 7rem auto;
+    position: relative;
+}
+
+.order_form h2{
+    font-size: 1rem;
+}
+
+.order_form p{
+    font-size: .6rem;
+}
+
+.order_form div{
+    margin: .5rem 0;
+}
+
+label p{
+    padding-left: .6rem;
+}
+
+.close{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0);
+}
+
+.form_error_massage{
+    color: red;
+    font-size: .5rem;
+    line-height: .2rem;
+    display: none;
+}
+
+.error input,
+.error select{
+    background-color: #fce4e4;
+    border: .05rem solid #cc0033;
+    outline: none;
+}
+
+.error .form_error_massage{
+    display: block;
+}
+
+.form_button{
+    display: inline-block;
+    background: #90d23d;
+    color: #ffffff;
+    padding: 0.3rem .5rem;
+    border-radius: 0.6rem;
+    font-size: 0.5rem;
+    transition: 0.2s;
+    border: 0.1rem solid #90d23d;
+    cursor: pointer;
 }

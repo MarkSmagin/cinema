@@ -7,6 +7,10 @@
     .block-gift__box {
         left: 3.5rem;
     }
+
+    .owl-nav{
+        display: none;
+    }
 }
 
 @media screen and (max-width:850px)
@@ -386,6 +390,10 @@
 
     .movie__text{
         font-size: .7rem;
+    }
+
+    .movie__bg img{
+        height: 17rem;
     }
 }
 
