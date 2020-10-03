@@ -113,36 +113,34 @@ const film = {
 let numberFilms = 0;
 let tableDOM = document.getElementById("filmsTable");
 let blockDOM = document.getElementById("filmsBlock");
-let filmsTable = new Promise(function(resolve, reject) {
-    films.forEach(function(item, i){    
-        let newFilm = getFilmById(item);
-        newFilm.then(result => {
-            let newRow = film.renderFilmRow.call(result.data);
-            let tr = document.createElement("tr");
-            
-            tr.classList.add('movie-list__row')
-            if((i + 1) % 3 === 0) {
-                tr.classList.add('movie-list__row_third')
-            }
-            if((i + 1) % 2 === 0){
-                tr.classList.add('movie-list__row_light')
-            }
-            else{
-                tr.classList.add('movie-list__row_dark')
-            }
-            tr.innerHTML = newRow;
-            tableDOM.appendChild(tr);
+films.forEach(function(item, i){    
+    let newFilm = getFilmById(item);
+    newFilm.then(result => {
+        let newRow = film.renderFilmRow.call(result.data);
+        let tr = document.createElement("tr");
+        
+        tr.classList.add('movie-list__row')
+        if((i + 1) % 3 === 0) {
+            tr.classList.add('movie-list__row_third')
+        }
+        if((i + 1) % 2 === 0){
+            tr.classList.add('movie-list__row_light')
+        }
+        else{
+            tr.classList.add('movie-list__row_dark')
+        }
+        tr.innerHTML = newRow;
+        tableDOM.appendChild(tr);
 
-            let newBlock = film.renderFilmBlock.call(result.data);
-            let div = document.createElement("div");
-            div.classList.add("block-movies__movie");
-            div.innerHTML = newBlock;
-            blockDOM.appendChild(div);
-            numberFilms++;
-        })
+        let newBlock = film.renderFilmBlock.call(result.data);
+        let div = document.createElement("div");
+        div.classList.add("block-movies__movie");
+        div.innerHTML = newBlock;
+        blockDOM.appendChild(div);
+        numberFilms++;
     })
-    resolve();
 })
+
 
 
 let filmsTableReady = setTimeout(function ready(){
