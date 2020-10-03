@@ -163,8 +163,8 @@ let filmsTableReady = setTimeout(function ready(){
     }
     else
     {
-        filmsTableReady = setTimeout(ready,500);
+        filmsTableReady = setTimeout(ready);
     }
-  }, 500)
+})
 
 
