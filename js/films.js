@@ -152,15 +152,15 @@ let filmsTableReady = setTimeout(function ready(){
         loop:true,
           responsive:{ 
               0:{
-                  items:1
-              },
-              570:{
-                  items:2
-              },
-              850:{
-                  items:3
-              }
-          }
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+            }
       })
     }
     else
