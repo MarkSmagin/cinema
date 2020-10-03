@@ -21,6 +21,7 @@ const getFilmById = function (id) {
 
 const film = {
     getName: function() {
+
         return this.nameRu;
     },
 
