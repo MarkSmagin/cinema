@@ -1,6 +1,6 @@
-const button = $('#submit');
+const formButton = $('#submit');
 const form = $('#form');
-button.on('click', function(event){
+formButton.on('click', function(event){
     event.preventDefault();
     let data = form.serialize()
     console.log(data)
