@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
-    
+    <script type="text/babel" src="js/films.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -131,12 +131,18 @@
         <div class="container">
             <h2 class="movie-list__h2" id="selectmovie">Выберите фильм</h2>
             <div class="block-moviel-list__wrap">
-                <table id="filmsTable" class="movie-list__table">
-                    <tr class="movie-list__thead">
-                        <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
-                        <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
-                        <td class="movie-list__genre movie-list__cell_size">Жанр</td>
-                    </tr>
+                <table class="movie-list__table">
+                    <thead>
+                        <tr class="movie-list__thead">
+                            <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
+                            <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
+                            <td class="movie-list__genre movie-list__cell_size">Жанр</td>
+                            <td class="movie-list__cell_size">Стоимость билета</td>
+                        </tr>
+                    </thead>
+                    <tbody  id="filmsTable">
+
+                    </tbody>
                 </table>
             </div>
             <p class="movie-list__footer">
@@ -324,14 +330,14 @@
     </footer>
     <!-- Конец Подвала сайта -->
 
-    <!-- Форма -->
+    <!-- Формs -->
     <div id="popup" class="block_form hidden">
         <div class="container">
-            <form class="order_form" id="form1" action="">
+            <form class="order_form" id="form_take_gift" action="">
                 <div id="form_close" class="close">
                     <i class="icon icon-cross" title="cross"></i>
                 </div>
-                <h2>Заказать билет</h2>
+                <h2>Получить подарок</h2>
                 <div class="input_wrap">
                     <p>Введите ваше имя:</p>
                     <input type="text" placeholder="Имя" id="name" required><br/>
@@ -383,7 +389,61 @@
                 </div>
     
                 <div>
-                    <input class="form_button" id="submit" type="submit" value="Заказать">
+                    <input class="form_button" id="submitTakeGift" type="submit" value="Получить">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="buy_ticket" class="block_form hidden">
+        <div class="container">
+            <form class="form_buy_ticket" id="form_buy_ticket" action="">
+                <div id="buy_ticket_close" class="close">
+                    <i class="icon icon-cross" title="cross"></i>
+                </div>
+                <h2>Заказать билет</h2>
+                <div class="input_wrap">
+                    Название фильма: 
+                    <p id="buyTicketName"></p>
+                </div>
+                <div class="input_wrap">
+                    Начало сеанса: 
+                    <p id="buyTicketStart"></p>
+                </div>
+                <div class="input_wrap">
+                    Жанр: 
+                    <p id="buyTicketGenre"></p>
+                </div>
+                <div class="input_wrap">
+                    Стоимость билета: 
+                    <p><span id="buyTicketPrice"></span></p>
+                </div>
+                <div class="input_wrap">
+                    Выбранные места: 
+                    <p id="buyTicketPlaces"></p>
+                </div>
+                <div class="input_wrap">
+                    Колличество выбранных мест: 
+                    <p id="buyTicketPlacesSum"></p>
+                </div>
+                <div class="input_wrap">
+                    Итого: 
+                    <p id="buyTicketPriceSum"></p>
+                </div>
+                <div class="input_wrap">
+                    Введите ваше имя:
+                    <input type="text" placeholder="Имя" id="user_name" required>
+                    <div class="form_error_massage"></div>
+                </div>
+    
+                <div class="input_wrap">
+                    Введите ваш номер телефона:
+                    <input id="user_tel" type="tel" placeholder="Телефон" pattern="\d*" required>
+                    <div class="form_error_massage"></div>
+                </div>
+            
+                <div>
+                    <button class="form_button" id="submitBuyTicket" type="submit">Заказать</button>
                 </div>
             </form>
         </div>
@@ -393,7 +453,6 @@
     <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" src="js/custom.js"></script>
-    <script type="text/babel" src="js/films.js"></script>
 </body>
 </html>
 

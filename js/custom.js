@@ -1,4 +1,4 @@
-const formButton = $('#submit');
+const formButton = $('#submitTakeGift');
 const form = $('#form');
 formButton.on('click', function(event){
     event.preventDefault();
@@ -8,7 +8,7 @@ formButton.on('click', function(event){
 
 const closeFormButton = document.getElementById('form_close');
 const openFormButton = document.getElementById('form_open');
-const sendForm = document.getElementById('submit');
+const sendForm = document.getElementById('submitTakeGift');
 
 const popup = document.getElementById('popup');
 closeFormButton.onclick = function(event) {

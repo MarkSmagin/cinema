@@ -381,7 +381,6 @@ button {
     margin: 0 0 1.8rem;
 }
 
-
 .movie-list__thead{
     background-color: #a3cc40;
     font-size: 1.5rem;
@@ -392,26 +391,24 @@ button {
     font-size: 1.1rem;
 }
 
-.movie-list__vertical_align{
-    vertical-align: top;
-}
-
 .movie-list__cell_size{
-    padding-bottom: 1.3rem;
-    padding-top: 1.3rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    vertical-align: middle;
 }
 
-.movie-list__row_dark{
+.movie-list__row:nth-child(odd) {
     background-color: #373737;
 }
 
-.movie-list__row_light{
+.movie-list__row:nth-child(even) {
     background-color: #4b4d4f;
 }
 
-.movie-list__row_third{
+.movie-list__row:nth-child(3n) {
     background-color: #6c6c6c;
 }
+
 
 .movie-list__genre{
     text-align: left;
@@ -654,7 +651,7 @@ button {
     font-size: .9rem;
 }
 
-/* Форма */
+/* Формы */
 .block_form{
     position: fixed;
     left: 0;
@@ -684,11 +681,7 @@ button {
     font-size: 1rem;
 }
 
-.order_form p{
-    font-size: .6rem;
-}
-
-.order_form div{
+.input_wrap{
     margin: .5rem 0;
 }
 
@@ -732,4 +725,48 @@ label p{
     transition: 0.2s;
     border: 0.1rem solid #90d23d;
     cursor: pointer;
+    width: 100%;
+}
+
+.places{
+    text-align: center;
+}
+
+.places_square{
+    border-radius: .2rem;
+    border: 1px solid black;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: .7rem;
+    display: inline-block;
+    margin: .2rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.places_booked{
+    background: #ffa500;
+}
+
+.places_free{
+    background: #a3cc40;
+}
+
+.places_grey{
+    background: #4b4d4f;
+}
+
+.blackPlace {
+    background: #242424;
+}
+
+.form_buy_ticket{
+    background: rgb(255, 255, 255);
+    border-radius: .7rem;
+    box-shadow: .05rem 0rem .25rem rgb(125, 125, 125);
+    box-sizing: border-box;
+    width: 22rem;
+    padding: .6rem;
+    margin: .5rem auto;
+    position: relative;
 }
