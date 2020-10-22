@@ -194,6 +194,16 @@ $(document).ready(function(){
     
             function filmClick(event) {
                 event.preventDefault();
+
+                let name = document.getElementById('user_name');
+                let nameParent = name.parentNode;
+                nameParent.classList.remove('error');
+                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
+
+                let phone = document.getElementById('user_phone');
+                let phoneParent = phone.parentNode;
+                phoneParent.classList.remove('error');
+                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
     
                 buy_ticket.classList.remove('hidden');
                 let buyTicketName = document.getElementById('buyTicketName');
@@ -254,7 +264,38 @@ $(document).ready(function(){
             };
     
             tr.addEventListener('click', filmClick);
-            closeBuyTicket.addEventListener('click', filmClickClose);     
+
+            closeBuyTicket.addEventListener('click', filmClickClose); 
+
+            const sendForm = document.getElementById('submitBuyTicket');
+            sendForm.addEventListener('click', sendBuyTicketForm);
+            function sendBuyTicketForm(event){
+                event.preventDefault();
+
+                let name = document.getElementById('user_name');
+                let nameParent = name.parentNode;
+                nameParent.classList.remove('error');
+                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
+                if(!checkInput(name.value)){
+                nameParent.classList.add('error');
+                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = 'Заполните поле Имя';
+                }
+
+                let phone = document.getElementById('user_phone');
+                let phoneParent = phone.parentNode;
+                phoneParent.classList.remove('error');
+                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
+                if(!checkInput(phone.value)){
+                phoneParent.classList.add('error');
+                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = 'Заполните поле Телефон';
+                }
+            }
+
+            function checkInput(value) {
+                if (value)
+                  return true;
+                return false
+            }
         })
     })
     
@@ -284,7 +325,7 @@ $(document).ready(function(){
                     total = total + 200;
                 }
             }
-            buyTicketPriceSum.innerHTML = total;
+            buyTicketPriceSum.innerHTML = `${total} рублей`;
         }
         else {
             alert('Место забронировано');
@@ -294,7 +335,7 @@ $(document).ready(function(){
     function placeToggle(e) {
         let el = e.target;
         if(el.classList.contains('places_free')) {
-            el.classList.toggle('places_grey');
+            el.classList.toggle('yellow_place');
         }
     }
     
@@ -327,7 +368,7 @@ $(document).ready(function(){
         }
         else
         {
-            filmsTableReady = setTimeout(ready);
+            setTimeout(ready);
         }
     })
 })
