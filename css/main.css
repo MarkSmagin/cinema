@@ -706,7 +706,10 @@ label p{
     font-size: .6rem;
     line-height: 1rem;
     display: none;
+}
 
+.ticket_error{
+    text-align: center;
 }
 
 .error input,
@@ -762,7 +765,7 @@ label p{
     background: #4b4d4f;
 }
 
-.yellow_place{
+.reserve{
     background: yellow;
 }
 

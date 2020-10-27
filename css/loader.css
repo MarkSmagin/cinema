@@ -1,0 +1,149 @@
+
+.overlay-loader {
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.5rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 1.5rem;
+	height: 1.5rem;
+	animation-name: rotateAnim;
+		-o-animation-name: rotateAnim;
+		-ms-animation-name: rotateAnim;
+		-webkit-animation-name: rotateAnim;
+		-moz-animation-name: rotateAnim;
+	animation-duration: 0.4s;
+		-o-animation-duration: 0.4s;
+		-ms-animation-duration: 0.4s;
+		-webkit-animation-duration: 0.4s;
+		-moz-animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+		-o-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+}
+.loader div {
+	width: 0.15rem;
+	height: 0.15rem;
+	border-radius: 50%;
+	border: 0px solid rgb(255, 255, 255);
+	position: absolute;
+	top: 0.05rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.loader div:nth-child(odd) {
+	border-top: none;
+	border-left: none;
+}
+.loader div:nth-child(even) {
+	border-bottom: none;
+	border-right: none;
+}
+.loader div:nth-child(2) {
+	border-width: 0.05rem;
+	left: 0px;
+	top: -0.05rem;
+	width: 0.2rem;
+	height: 0.2rem;
+}
+.loader div:nth-child(3) {
+	border-width: 0.05rem;
+	left: -0rem;
+	top: 0.05rem;
+	width: 0.3rem;
+	height: 0.3rem;
+}
+.loader div:nth-child(4) {
+	border-width: 0.05rem;
+	left: -0rem;
+	top: -0.05rem;
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.loader div:nth-child(5) {
+	border-width: 0.05rem;
+	left: -0rem;
+	top: 0.05rem;
+	width: 0.55rem;
+	height: 0.55rem;
+}
+.loader div:nth-child(6) {
+	border-width: 0.05rem;
+	left: 0rem;
+	top: -0.05rem;
+	width: 0.7rem;
+	height: 0.7rem;
+}
+.loader div:nth-child(7) {
+	border-width: 0.05rem;
+	left: 0rem;
+	top: 0.1rem;
+	width: 0.85rem;
+	height: 0.85rem;
+}
+
+
+@keyframes rotateAnim {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@-o-keyframes rotateAnim {
+	from {
+		-o-transform: rotate(360deg);
+	}
+	to {
+		-o-transform: rotate(0deg);
+	}
+}
+
+@-ms-keyframes rotateAnim {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+	to {
+		-ms-transform: rotate(0deg);
+	}
+}
+
+@-webkit-keyframes rotateAnim {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+	to {
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+@-moz-keyframes rotateAnim {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		-moz-transform: rotate(0deg);
+	}
+}

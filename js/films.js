@@ -133,9 +133,9 @@ $(document).ready(function(){
         },
     
         getGenre: function() {
-            let genres = '';
-            this.genres.forEach(function(item){
-               genres += `${item.genre} `
+            let genres = [];
+            this.genres.forEach(function(item, i){
+               genres[i] = ` ${item.genre}`;
             })
             return genres;
             
@@ -195,16 +195,10 @@ $(document).ready(function(){
             function filmClick(event) {
                 event.preventDefault();
 
-                let name = document.getElementById('user_name');
-                let nameParent = name.parentNode;
-                nameParent.classList.remove('error');
-                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
+                clearErrors(form_buy_ticket);
 
-                let phone = document.getElementById('user_phone');
-                let phoneParent = phone.parentNode;
-                phoneParent.classList.remove('error');
-                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
-    
+                form_buy_ticket.addEventListener('click', orderBubble)
+
                 buy_ticket.classList.remove('hidden');
                 let buyTicketName = document.getElementById('buyTicketName');
                 buyTicketName.innerHTML = result.data.nameRu;
@@ -221,8 +215,8 @@ $(document).ready(function(){
                 let blockSquares = document.createElement('div');
                 blockSquares.classList.add('places');
                 blockSquares.id = "places";
-                $(blockSquares).insertAfter($("input:last").parent(div));
-    
+                $(blockSquares).insertAfter($('input.input_form:last').parent('div.input_wrap'));
+
                 let p = document.createElement("p");
                 p.innerHTML = 'Выберите место:';
                 blockSquares.appendChild(p);
@@ -231,7 +225,6 @@ $(document).ready(function(){
                     if(i === index){
                         for(let j = 0; j < hallsPlaces[i].length; j++){
                             let newSquare = document.createElement("div");
-                            newSquare.addEventListener('click', order);
                             newSquare.addEventListener('click', placeToggle);
                             newSquare.addEventListener('contextmenu', placeContext)
                             newSquare.addEventListener('mouseover', placeHower);
@@ -251,91 +244,55 @@ $(document).ready(function(){
                 }
             }
     
-            
-            const closeBuyTicket = document.getElementById('buy_ticket_close');
-            function filmClickClose(event) {
-                event.preventDefault();
-                document.getElementById('places').remove();
-                buyTicketPlaces.innerHTML = '';
-                buyTicketPlacesSum.innerHTML = '';
-                buyTicketPriceSum.innerHTML = ''; 
-                buy_ticket.classList.add('hidden');
-                selectedPlaces = [];
-            };
-    
             tr.addEventListener('click', filmClick);
 
+            const closeBuyTicket = document.getElementById('buy_ticket_close');
             closeBuyTicket.addEventListener('click', filmClickClose); 
 
             const sendForm = document.getElementById('submitBuyTicket');
             sendForm.addEventListener('click', sendBuyTicketForm);
-            function sendBuyTicketForm(event){
-                event.preventDefault();
-
-                let name = document.getElementById('user_name');
-                let nameParent = name.parentNode;
-                nameParent.classList.remove('error');
-                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
-                if(!checkInput(name.value)){
-                nameParent.classList.add('error');
-                nameParent.getElementsByClassName('form_error_massage')[0].innerHTML = 'Заполните поле Имя';
-                }
-
-                let phone = document.getElementById('user_phone');
-                let phoneParent = phone.parentNode;
-                phoneParent.classList.remove('error');
-                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = '';
-                if(!checkInput(phone.value)){
-                phoneParent.classList.add('error');
-                phoneParent.getElementsByClassName('form_error_massage')[0].innerHTML = 'Заполните поле Телефон';
-                }
-            }
-
-            function checkInput(value) {
-                if (value)
-                  return true;
-                return false
-            }
         })
     })
     
     let selectedPlaces = [];
-    function order(e) {
+    
+    function orderBubble(e){
         let el = e.target;
-        if(el.classList.contains('places_free')) {
-            if(selectedPlaces.includes(el.innerHTML)){
-                for(let i = 0; i < selectedPlaces.length; i++) {
-                    if (selectedPlaces[i] == el.innerHTML) {  
-                        selectedPlaces.splice(i, 1);
+        if (el.classList.contains('places_free')){
+            if(el.classList.contains('places_free')) {
+                if(selectedPlaces.includes(el.innerHTML)){
+                    for(let i = 0; i < selectedPlaces.length; i++) {
+                        if (selectedPlaces[i] == el.innerHTML) {  
+                            selectedPlaces.splice(i, 1);
+                        }
+                    }
+                }   
+                else{
+                    selectedPlaces.push(el.innerHTML);
+                }
+                buyTicketPlaces.innerHTML = selectedPlaces;
+                buyTicketPlacesSum.innerHTML = selectedPlaces.length;
+                let total = 0;
+                for(let i = 0; i < selectedPlaces.length; i++){
+                    if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
+                        total = total + 100;
+                    }
+                    else{
+                        total = total + 200;
                     }
                 }
-            }   
-            else{
-                selectedPlaces.push(el.innerHTML);
+                buyTicketPriceSum.innerHTML = `${total} рублей`;
             }
-            console.log(selectedPlaces)
-            buyTicketPlaces.innerHTML = selectedPlaces;
-            buyTicketPlacesSum.innerHTML = selectedPlaces.length;
-            let total = 0;
-            for(let i = 0; i < selectedPlaces.length; i++){
-                if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
-                    total = total + 100;
-                }
-                else{
-                    total = total + 200;
-                }
+            else {
+                alert('Место забронировано');
             }
-            buyTicketPriceSum.innerHTML = `${total} рублей`;
-        }
-        else {
-            alert('Место забронировано');
         }
     }
-    
+
     function placeToggle(e) {
         let el = e.target;
         if(el.classList.contains('places_free')) {
-            el.classList.toggle('yellow_place');
+            el.classList.toggle('reserve');
         }
     }
     
@@ -357,6 +314,113 @@ $(document).ready(function(){
     function placeHowerOut(e) {
         let el = e.target;
         el.classList.remove('places_grey');
+    }
+
+    function filmClickClose(event) {
+        event.preventDefault();
+        document.getElementById('places').remove();
+        buyTicketPlaces.innerHTML = '';
+        buyTicketPlacesSum.innerHTML = '';
+        buyTicketPriceSum.innerHTML = ''; 
+        buy_ticket.classList.add('hidden');
+        selectedPlaces = [];
+    };
+
+    function checkCorrectPhoneNumber(number) {
+        // const reg = new RegExp('^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$');
+        return true;
+    }
+
+    const clearErrors = element => {
+        let i = 0;
+
+        while(i < element.getElementsByClassName('form_error_massage').length){
+            element.getElementsByClassName('form_error_massage')[i].parentNode.classList.remove('error');
+            element.getElementsByClassName('form_error_massage')[i].innerHTML = '';
+            i++;
+        }
+    }
+
+    function sendBuyTicketForm(event){
+        event.preventDefault();
+        clearErrors(form_buy_ticket);
+        let error = false;
+
+        const setError = ($el, error) => {
+            $el.parentNode.classList.add('error');
+            $el.parentNode.getElementsByClassName('form_error_massage')[0].innerHTML = error;
+        }
+
+        const fields = form_buy_ticket.getElementsByTagName('input');
+
+        const data = {
+            name: '',
+            phone: '',
+            chosePlace: []
+        }
+        
+        for(let i = 0; i < fields.length; i++){
+            switch(fields[i].getAttribute('name')){
+                case 'name':
+                    if(!checkInput(fields[i].value)){
+                        setError(fields[i], 'Заполните поле Имя');
+                        error = true;
+                        break;
+                    }
+                    data.name = fields[i].value;
+                    break
+
+                case 'phone':
+                    if(!checkInput(fields[i].value)){
+                        setError(fields[i], 'Заполните поле Телефон');
+                        error = true;
+                        break;
+                    }
+                    else{
+                        if(!checkCorrectPhoneNumber(fields[i].value)){
+                            setError(fields[i], 'Введите корректный номер телефона');
+                            error = true;
+                            break;
+                        }
+                        data.phone = fields[i].value;
+                        break;
+                    }
+                    break;
+                default:
+                    console.error("Поле не опознано");
+            }
+        }
+
+        if(form_buy_ticket.getElementsByClassName('reserve').length < 1){
+            error = true;
+            form_buy_ticket.getElementsByClassName('ticket_error')[0].classList.add('error');
+            form_buy_ticket.getElementsByClassName('ticket_error')[0].getElementsByTagName('p')[0].innerHTML = 'Выберите хотя бы одно место';
+            
+        }
+        else{
+            let chosePlace = [];
+            for(let i = 0; i < form_buy_ticket.getElementsByClassName('reserve').length; i++){
+                chosePlace.push(form_buy_ticket.getElementsByClassName('reserve')[i].innerHTML)
+            }
+            data.chosePlace = chosePlace;
+        }
+
+        if(error){
+            return;
+        }
+
+        //Сформируем объект для отправки на сервер и отправим
+        submitBuyTicket.setAttribute('disabled', 'false');
+        submitBuyTicket.getElementsByClassName('overlay-loader')[0].style.display = 'inline-block';
+
+        setTimeout(() => {
+            submitBuyTicket.removeAttribute('disabled');
+            submitBuyTicket.getElementsByClassName('overlay-loader')[0].style.display = 'none';
+            buy_ticket.classList.add('hidden');
+            popupSuccess.classList.remove('hidden');
+            document.getElementById('places').remove();
+        }, 3000);
+        
     }
     
     setTimeout(function ready(){

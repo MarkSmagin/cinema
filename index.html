@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="js/plugins/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/media.css">
-    <script src="https://use.fontawesome.com/80aa202096.js"></script>
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="js/plugins/fancybox/jquery.fancybox.min.css">
     <script type="text/babel" src="js/films.js"></script>
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
@@ -42,7 +43,7 @@
                     <div class="block-hat__city">
                         <p class="city_choose">
                             <span>Ваш город: </span>
-                            <a href="#">Москва</a>
+                            <a id="city_name" href="#"></a>
                         </p>
                     </div>
                 </div>
@@ -54,7 +55,6 @@
             </div>
         </div>
     </div>
-
     <!-- Секция Почему мы?-->
     
 
@@ -340,19 +340,19 @@
                 <h2>Получить подарок</h2>
                 <div class="input_wrap">
                     <p>Введите ваше имя:</p>
-                    <input type="text" placeholder="Имя" id="name" required><br/>
+                    <input type="text" placeholder="Имя" id="name" name="name" required><br/>
                     <div class="form_error_massage"></div>
                 </div>
     
                 <div class="input_wrap">
                     <p>Введите ваш адресс электронной почты:</p>
-                    <input id="email" type="email" placeholder="email" required>
+                    <input id="email" type="email" placeholder="email" name="email" required>
                     <div class="form_error_massage"></div>
                 </div>
     
                 <div class="input_wrap">
                     <p>Выберите место:</p>
-                    <select name="select" id="select">
+                    <select name="select_place" id="select">
                         <option value="0"></option>
                         <option value="1">Место №1</option>
                         <option value="2">Место №2</option>
@@ -370,11 +370,11 @@
     
                 <div class="input_wrap">
                     <p>Ваш комментарий:</p>
-                    <textarea class="textarea" id="textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                    <textarea class="textarea" id="textarea" name="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
                 </div>
     
                 <div class="input_wrap">
-                    <input type="checkbox" class="option1" name="option1" id="agree" required>
+                    <input type="checkbox" class="option1" name="check_agree" id="agree" required>
                     <label for="agree">
                         <i class="icon icon-check" title="check"></i><p>Я согласен на обработку персональных данных</p>
                     </label>
@@ -382,8 +382,8 @@
                 </div>
     
                 <div class="input_wrap">
-                    <input type="file" name="file1" id="file1">
-                        <label for="file1">
+                    <input type="file" name="user_file" id="user_file">
+                        <label for="user_file">
                             Загрузить файл
                         </label>
                 </div>
@@ -432,27 +432,85 @@
                 </div>
                 <div class="input_wrap">
                     Введите ваше имя:
-                    <input type="text" placeholder="Имя" id="user_name" required>
+                    <input type="text" placeholder="Имя" id="user_name" name="name" class="input_form" required>
                     <div class="form_error_massage"></div>
                 </div>
     
                 <div class="input_wrap">
                     Введите ваш номер телефона:
-                    <input id="user_phone" type="tel" placeholder="Телефон" pattern="\d*" required>
+                    <input id="user_phone" type="tel" placeholder="Телефон" name="phone" class="input_form" pattern="\d*" required>
                     <div class="form_error_massage"></div>
                 </div>
             
+                <div class="ticket_error error">
+                    <p class="form_error_massage"></p>
+                </div>
+
                 <div>
-                    <button class="form_button" id="submitBuyTicket" type="submit">Заказать</button>
+                    <button class="form_button" id="submitBuyTicket" type="submit">Заказать
+                        <div class="overlay-loader" style="display: none;">
+                            <div class="loader">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
             </form>
         </div>
     </div> 
     
+    <div id="popupSuccess" class="block_form hidden">
+        <div class="container">
+            <form class="order_form" id="form_take_gift" action="">
+                <div id="popup_success_close" class="close">
+                    <i class="icon icon-cross" title="cross"></i>
+                </div>
+                <div class="input_wrap">
+                    <h3>Ура!</h3>
+                    <p>Вы купили билет(билеты) в кино</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="choose_city" class="modal modal-city" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="formv">
+                    <fieldset>
+                        <div class="modal-header">
+                            <p class="modal-title">Ваш город</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-xs-12">
+                                <div class="input-group">
+                                    <input class="st-input4" type="text" name="city_choose" required placeholder="Начните набирать название города">
+                                </div>
+                                <p id="search_result">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery.js"></script>
     <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script type="text/babel" src="js/custom.js"></script>
+    <script src="js/plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="https://use.fontawesome.com/80aa202096.js"></script>
 </body>
 </html>
 

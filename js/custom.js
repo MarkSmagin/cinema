@@ -7,13 +7,19 @@ formButton.on('click', function(event){
 })
 
 const closeFormButton = document.getElementById('form_close');
+const closeFormButtonSuccess = document.getElementById('popup_success_close');
 const openFormButton = document.getElementById('form_open');
 const sendForm = document.getElementById('submitTakeGift');
 
 const popup = document.getElementById('popup');
 closeFormButton.onclick = function(event) {
-    event.preventDefault();
-    popup.classList.add('hidden');
+  event.preventDefault();
+  popup.classList.add('hidden');
+};
+
+closeFormButtonSuccess.onclick = function(event) {
+  event.preventDefault();
+  popupSuccess.classList.add('hidden');
 };
 
 openFormButton.onclick = function(event){
