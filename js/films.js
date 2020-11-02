@@ -280,34 +280,32 @@ $(document).ready(function(){
     
     function orderBubble(e){
         let el = e.target;
-        if (el.classList.contains('places_free')){
-            if(el.classList.contains('places_free')) {
-                if(selectedPlaces.includes(el.innerHTML)){
-                    for(let i = 0; i < selectedPlaces.length; i++) {
-                        if (selectedPlaces[i] == el.innerHTML) {  
-                            selectedPlaces.splice(i, 1);
-                        }
+        if(el.classList.contains('places_free')) {
+            if(selectedPlaces.includes(el.innerHTML)){
+                for(let i = 0; i < selectedPlaces.length; i++) {
+                    if (selectedPlaces[i] == el.innerHTML) {  
+                        selectedPlaces.splice(i, 1);
                     }
-                }   
+                }
+            }   
+            else{
+                selectedPlaces.push(el.innerHTML);
+            }
+            buyTicketPlaces.innerHTML = selectedPlaces;
+            buyTicketPlacesSum.innerHTML = selectedPlaces.length;
+            let total = 0;
+            for(let i = 0; i < selectedPlaces.length; i++){
+                if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
+                    total = total + 100;
+                }
                 else{
-                    selectedPlaces.push(el.innerHTML);
+                    total = total + 200;
                 }
-                buyTicketPlaces.innerHTML = selectedPlaces;
-                buyTicketPlacesSum.innerHTML = selectedPlaces.length;
-                let total = 0;
-                for(let i = 0; i < selectedPlaces.length; i++){
-                    if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
-                        total = total + 100;
-                    }
-                    else{
-                        total = total + 200;
-                    }
-                }
-                buyTicketPriceSum.innerHTML = `${total} рублей`;
             }
-            else {
-                alert('Место забронировано');
-            }
+            buyTicketPriceSum.innerHTML = `${total} рублей`;
+        }
+        else {
+            alert('Место забронировано');
         }
     }
 
@@ -461,24 +459,4 @@ $(document).ready(function(){
 
     
 })
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const getSort = ({ target }) => {
-//         const order = (target.dataset.order = -(target.dataset.order || -1));
-//         const index = [...target.parentNode.cells].indexOf(target);
-//         const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
-//         const comparator = (index, order) => (a, b) => order * collator.compare(
-//             a.children[index].innerHTML,
-//             b.children[index].innerHTML
-//         );
-//         for(const tBody of target.closest('table').tBodies){
-//             tBody.append(...[...tBody.rows].sort(comparator(index, order)));
-//         }
-//         for(const cell of target.parentNode.cells){
-//             cell.classList.toggle('sorted', cell === target);
-//         }    
-//     }
-//     document.querySelectorAll('.table_sort thead').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
-    
-// });
 
