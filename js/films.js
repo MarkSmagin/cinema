@@ -280,32 +280,34 @@ $(document).ready(function(){
     
     function orderBubble(e){
         let el = e.target;
-        if(el.classList.contains('places_free')) {
-            if(selectedPlaces.includes(el.innerHTML)){
-                for(let i = 0; i < selectedPlaces.length; i++) {
-                    if (selectedPlaces[i] == el.innerHTML) {  
-                        selectedPlaces.splice(i, 1);
+        if(el.classList.contains('places_square')){
+            if(el.classList.contains('places_free')) {
+                if(selectedPlaces.includes(el.innerHTML)){
+                    for(let i = 0; i < selectedPlaces.length; i++) {
+                        if (selectedPlaces[i] == el.innerHTML) {  
+                            selectedPlaces.splice(i, 1);
+                        }
+                    }
+                }   
+                else{
+                    selectedPlaces.push(el.innerHTML);
+                }
+                buyTicketPlaces.innerHTML = selectedPlaces;
+                buyTicketPlacesSum.innerHTML = selectedPlaces.length;
+                let total = 0;
+                for(let i = 0; i < selectedPlaces.length; i++){
+                    if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
+                        total = total + 100;
+                    }
+                    else{
+                        total = total + 200;
                     }
                 }
-            }   
-            else{
-                selectedPlaces.push(el.innerHTML);
+                buyTicketPriceSum.innerHTML = `${total} рублей`;
             }
-            buyTicketPlaces.innerHTML = selectedPlaces;
-            buyTicketPlacesSum.innerHTML = selectedPlaces.length;
-            let total = 0;
-            for(let i = 0; i < selectedPlaces.length; i++){
-                if(selectedPlaces[i] % 10 <= 3 || selectedPlaces[i] % 10 >= 7 ){
-                    total = total + 100;
-                }
-                else{
-                    total = total + 200;
-                }
+            else {
+                alert('Место забронировано');
             }
-            buyTicketPriceSum.innerHTML = `${total} рублей`;
-        }
-        else {
-            alert('Место забронировано');
         }
     }
 
