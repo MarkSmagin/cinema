@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="js/plugins/fancybox/jquery.fancybox.min.css">
-    <script type="text/babel" src="js/films.js"></script>
+    
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -89,33 +89,7 @@
     
                 <div class="whywe__plus">
                     <div  class="whywe__img">
-                        <img class="whywe__img_chairs" src="img/b2_icon_3.jpg" alt="">
-                    </div>
-                    <h3 class="whywe__h3">Удобные кресла</h3>
-                    <p class="whywe__text whywe__text_align">Gather round fellow authors! Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.</p>
-                </div>
-
-                <div class="clear whywe__row"></div> 
-
-                <div class="whywe__plus">
-                    <div class="whywe__img">
-                        <img class="whywe__img_screens" src="img/b2_icon_1.jpg" alt="">
-                    </div>
-                    <h3 class="whywe__h3">Большие экраны</h3>
-                    <p class="whywe__text whywe__text_align">Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging each other with interesting coversation and topics. We will have loads of fun.</p>    
-                </div>
-    
-                <div class="whywe__plus">
-                    <div  class="whywe__img">
-                        <img class="whywe__img_sounds" src="img/b2_icon_2.jpg" alt="">
-                    </div>                  
-                    <h3 class="whywe__h3">Объемный звук</h3>
-                    <p class="whywe__text whywe__text_align">In this meetup you will get to know the marketplaces better, because that’s why were all here for right? Learn a few tips and tricks from experienced authors from all over the country.</p>
-                </div>
-    
-                <div class="whywe__plus">
-                    <div  class="whywe__img">
-                        <img class="whywe__img_chairs" src="img/b2_icon_3.jpg" alt="">
+                        <img id="open_gallery" class="whywe__img_chairs" src="img/b2_icon_3.jpg" alt="" title="Нажми меня, чтобы увидеть интерьер">
                     </div>
                     <h3 class="whywe__h3">Удобные кресла</h3>
                     <p class="whywe__text whywe__text_align">Gather round fellow authors! Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.</p>
@@ -126,18 +100,21 @@
     </div>
     <!-- Конец секции Почему мы?-->
 
+    
     <!-- Секция Выберите фильм-->
     <div class="block-movie-list">
         <div class="container">
             <h2 class="movie-list__h2" id="selectmovie">Выберите фильм</h2>
             <div class="block-moviel-list__wrap">
-                <table class="movie-list__table">
+                <table class="table_sort movie-list__table">
                     <thead>
                         <tr class="movie-list__thead">
-                            <td class="movie-list__time movie-list__cell_size"><a href="#">Начало сеанса<i class="fa fa-caret-down"></i></a></td>
-                            <td class="movie-list__name movie-list__cell_size"><a href="#">Название фильма<i class="fa fa-caret-up" aria-hidden="true"></i></a></td>
-                            <td class="movie-list__genre movie-list__cell_size">Жанр</td>
-                            <td class="movie-list__cell_size">Стоимость билета</td>
+                            <th class=""></th>
+                            <th class="movie-list__time movie-list__cell_size">Начало сеанса</th>
+                            <th class=""></th>
+                            <th id="movie-list__name" class="movie-list__name movie-list__cell_size">Название фильма</th>
+                            <th class="movie-list__year movie-list__cell_size">Год выпуска</th>
+                            <th class="movie-list__descr movie-list__cell_size">Описание</th>
                         </tr>
                     </thead>
                     <tbody  id="filmsTable">
@@ -193,7 +170,7 @@
 
     <!-- Секция карта -->
     <div class="block-map">
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1335.0743132861205!2d48.74308147609908!3d55.75297081498857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead10e59136d3%3A0x4b2878a0acaeb103!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNC90L3QvtC_0L7Qu9C40YE!5e0!3m2!1sru!2sru!4v1598650780424!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/universitet_innopolis/1297240913/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Университет Иннополис</a><a href="https://yandex.ru/maps/121642/innopolis/category/university_college/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Иннополисе</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~70eBcA" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
     </div>
     <!-- Конец секции карта -->
     
@@ -333,26 +310,26 @@
     <!-- Формs -->
     <div id="popup" class="block_form hidden">
         <div class="container">
-            <form class="order_form" id="form_take_gift" action="">
+            <form class="order_form" id="form_take_gift">
                 <div id="form_close" class="close">
                     <i class="icon icon-cross" title="cross"></i>
                 </div>
                 <h2>Получить подарок</h2>
                 <div class="input_wrap">
                     <p>Введите ваше имя:</p>
-                    <input type="text" placeholder="Имя" id="name" name="name" required><br/>
+                    <input type="text" placeholder="Имя" id="name" name="user_name" required><br/>
                     <div class="form_error_massage"></div>
                 </div>
     
                 <div class="input_wrap">
                     <p>Введите ваш адресс электронной почты:</p>
-                    <input id="email" type="email" placeholder="email" name="email" required>
+                    <input id="email" type="email" placeholder="email" name="user_email" required>
                     <div class="form_error_massage"></div>
                 </div>
     
                 <div class="input_wrap">
                     <p>Выберите место:</p>
-                    <select name="select_place" id="select">
+                    <select name="select_place" id="select" name="user_choice">
                         <option value="0"></option>
                         <option value="1">Место №1</option>
                         <option value="2">Место №2</option>
@@ -370,11 +347,11 @@
     
                 <div class="input_wrap">
                     <p>Ваш комментарий:</p>
-                    <textarea class="textarea" id="textarea" name="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                    <textarea class="textarea" id="textarea" name="user_comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
                 </div>
     
                 <div class="input_wrap">
-                    <input type="checkbox" class="option1" name="check_agree" id="agree" required>
+                    <input type="checkbox" class="check_agree" name="check_agree" id="agree" required>
                     <label for="agree">
                         <i class="icon icon-check" title="check"></i><p>Я согласен на обработку персональных данных</p>
                     </label>
@@ -467,7 +444,7 @@
     
     <div id="popupSuccess" class="block_form hidden">
         <div class="container">
-            <form class="order_form" id="form_take_gift" action="">
+            <form class="order_form" action="">
                 <div id="popup_success_close" class="close">
                     <i class="icon icon-cross" title="cross"></i>
                 </div>
@@ -504,6 +481,23 @@
         </div>
     </div>
 
+    <div id="gallery" class="block_form hidden">
+        <div class="container">
+            <div class="halls">
+                <div id="gallery_close" class="close">
+                    <i class="icon icon-cross" title="cross"></i>
+                </div>
+                <h3 class="halls_h3">Галерея</h3>
+                <img class="hall_img" src="/img/halls/hall1.jpg" alt="">
+                <img class="hall_img" src="/img/halls/hall2.jpg" alt="">
+                <img class="hall_img" src="/img/halls/hall3.jpg" alt="">
+                <img class="hall_img" src="/img/halls/hall4.jpg" alt="">
+                <img class="hall_img" src="/img/halls/hall5.jpg" alt="">
+                <img class="hall_img" src="/img/halls/hall6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery.js"></script>
     <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -511,6 +505,9 @@
     <script type="text/babel" src="js/custom.js"></script>
     <script src="js/plugins/fancybox/jquery.fancybox.min.js"></script>
     <script src="https://use.fontawesome.com/80aa202096.js"></script>
+    <script src="js/gallery.js"></script>
+    <script type="text/babel" src="js/films.js"></script>
+    <script src="/js/tablesort.js"></script>
 </body>
 </html>
 

@@ -2,8 +2,9 @@ const formButton = $('#submitTakeGift');
 const form = $('#form');
 formButton.on('click', function(event){
     event.preventDefault();
-    let data = form.serialize()
-    console.log(data)
+    console.log( $(this).serialize() );
+    let data = form.serialize();
+    console.log(data);
 })
 
 const closeFormButton = document.getElementById('form_close');

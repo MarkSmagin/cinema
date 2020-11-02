@@ -28,7 +28,8 @@ $(document).ready(function(){
             space: 40
         }
     ]
-    
+
+    let index = 0;
     let places = [];
     let hallsPlaces = [];
     let numberHall;
@@ -89,6 +90,10 @@ $(document).ready(function(){
         getImg: function() {
             return this.posterUrl;
         },
+
+        getPreview: function() {
+            return this.posterUrlPreview;
+        },
     
         getLink: function() {
             return this.webUrl;
@@ -140,13 +145,18 @@ $(document).ready(function(){
             return genres;
             
         },
+
     
         renderFilmRow: function(){
+            index++;
             return `
+                <td class="block-movie__check"><input type="checkbox" class="block-movie__checkbox" id="block-movie__checkbox${index}">
+                <label for="block-movie__checkbox${index}"><i class="icon icon-check" title="check"></i></label></td>
                 <td class="movie-list__time movie-list__cell_size">${film.getStart.call(this)}</td>
+                <td class="movie-list__poster movie-list__cell_size"><img src="${film.getPreview.call(this)}" style="max-width: 2.7rem; width: 2.7rem; height: 4rem" alt=""></td>
                 <td class="movie-list__name movie-list__cell_size">${film.getName.call(this)}</td>
-                <td class="movie-list__genre movie-list__cell_size">${film.getGenre.call(this)}</td>
-                <td class="movie-list__price movie-list__cell_size">${film.getPrice.call(this)} рублей</td>
+                <td class="movie-list__year movie-list__cell_size">${film.getYear.call(this)}</td>
+                <td class="movie-list__descr movie-list__cell_size">${film.getDescription.call(this).substr(0, 15)}...</td>
             `
         },
     
@@ -192,12 +202,14 @@ $(document).ready(function(){
             numberFilms++;
             
     
-            function filmClick(event) {
-                event.preventDefault();
+            function filmClick(e) {
+                e.preventDefault();
+
+                $(`#block-movie__checkbox${index + 1}`).attr('checked', true);
 
                 clearErrors(form_buy_ticket);
 
-                form_buy_ticket.addEventListener('click', orderBubble)
+                form_buy_ticket.addEventListener('click', orderBubble);
 
                 buy_ticket.classList.remove('hidden');
                 let buyTicketName = document.getElementById('buyTicketName');
@@ -210,7 +222,7 @@ $(document).ready(function(){
                 buyTicketGenre.innerHTML = film.getGenre.call(result.data);
     
                 let buyTicketPrice = document.getElementById('buyTicketPrice');
-                buyTicketPrice.innerHTML = tr.getElementsByClassName('movie-list__price')[0].innerHTML;
+                buyTicketPrice.innerHTML = film.getPrice.call(result.data);
                 
                 let blockSquares = document.createElement('div');
                 blockSquares.classList.add('places');
@@ -243,6 +255,16 @@ $(document).ready(function(){
                     }
                 }
             }
+
+            const movieName = document.getElementById('movie-list__name');
+            movieName.addEventListener('click', nameSort);
+            function nameSort(e){
+                e.preventDefault();
+                // for (let i = 0; i < films.length - 1; i++){
+                console.log(td);
+                // }
+            }
+
     
             tr.addEventListener('click', filmClick);
 
@@ -319,12 +341,13 @@ $(document).ready(function(){
     function filmClickClose(event) {
         event.preventDefault();
         document.getElementById('places').remove();
+        $('.block-movie__checkbox').attr('checked', false);
         buyTicketPlaces.innerHTML = '';
         buyTicketPlacesSum.innerHTML = '';
         buyTicketPriceSum.innerHTML = ''; 
         buy_ticket.classList.add('hidden');
         selectedPlaces = [];
-    };
+    }
 
     function checkCorrectPhoneNumber(number) {
         // const reg = new RegExp('^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$');
@@ -435,7 +458,27 @@ $(document).ready(function(){
             setTimeout(ready);
         }
     })
+
+    
 })
 
-
+// document.addEventListener('DOMContentLoaded', () => {
+//     const getSort = ({ target }) => {
+//         const order = (target.dataset.order = -(target.dataset.order || -1));
+//         const index = [...target.parentNode.cells].indexOf(target);
+//         const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
+//         const comparator = (index, order) => (a, b) => order * collator.compare(
+//             a.children[index].innerHTML,
+//             b.children[index].innerHTML
+//         );
+//         for(const tBody of target.closest('table').tBodies){
+//             tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+//         }
+//         for(const cell of target.parentNode.cells){
+//             cell.classList.toggle('sorted', cell === target);
+//         }    
+//     }
+//     document.querySelectorAll('.table_sort thead').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
+    
+// });
 

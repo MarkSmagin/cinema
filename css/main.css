@@ -65,19 +65,19 @@ select {
 }
 
 input[type="radio"], 
-input[type="checkbox"] {
+.check_agree {
     display: none;
 }
 
 input[type="radio"] + label,
-input[type="checkbox"] + label {
+.check_agree + label {
     font-size: .5rem;
     position: relative;
     
 }
 
 input[type="radio"] + label i,
-input[type="checkbox"] + label i {
+.check_agree + label i {
     position: absolute;
     display: none;
     font-size: .4rem;
@@ -86,12 +86,12 @@ input[type="checkbox"] + label i {
     color: #90d23d;
 }
 
-input[type="checkbox"]:checked + label i{
+.check_agree:checked + label i{
     display: block;
 }
 
 input[type="radio"] + label::before,
-input[type="checkbox"] + label::before {
+.check_agree + label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -383,7 +383,7 @@ button {
 
 .movie-list__thead{
     background-color: #a3cc40;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
 }
 
@@ -409,10 +409,8 @@ button {
     background-color: #6c6c6c;
 }
 
-
-.movie-list__genre{
-    text-align: left;
-    padding-left: .5rem;
+.movie-list__year{
+    text-align: center;
 }
 
 .movie-list__name{
@@ -424,6 +422,32 @@ button {
     text-align: center;
 }
 
+.block-movie__checkbox{
+    display: none;
+}
+
+.block-movie__checkbox + label {
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.block-movie__check{
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    vertical-align: middle;
+    padding-left: 1rem;
+}
+
+.block-movie__checkbox:checked + label {
+    color: #a3cc40;
+    opacity: 1;
+}
+
+.movie-list__poster{
+    padding: .1rem 0;
+}
 /* Четвертый блок "Подарок каждому" */
 .block-gift{
     background: url("../img/ticket.jpg") no-repeat top center / cover;
@@ -778,4 +802,55 @@ label p{
     padding: .6rem;
     margin: .5rem auto;
     position: relative;
+}
+
+.hall_img{
+    width: 15rem;
+    height: 10rem;
+    margin: .3rem;
+}
+
+.halls{
+    background: rgb(255, 255, 255);
+    border-radius: .7rem;
+    box-shadow: .05rem 0rem .25rem rgb(125, 125, 125);
+    box-sizing: border-box;
+    width: 48.5rem;
+    padding: .6rem;
+    margin: 7rem auto;
+    position: relative;
+}
+
+.halls_h3{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: .85rem;
+}
+
+.table_sort table {
+    border-collapse: collapse;
+}
+
+.table_sort th {
+    cursor: pointer;
+}
+
+
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+    position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+    position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+	content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+	content: "▲"
 }

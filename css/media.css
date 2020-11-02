@@ -105,15 +105,6 @@
         font-size: 2.4rem;
     }
 
-    .block-moviel-list__wrap{
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .movie-list__table{
-        min-width: 50rem;
-    }
-
     .block-movies__inner {
         grid-template-columns: 1fr 1fr;
     }
@@ -201,6 +192,17 @@
     }
 }
 
+@media screen and (max-width:720px)
+{
+    .movie-list__year{
+        display: none;
+    }
+
+    .movie-list__descr{
+        display: none;
+    }
+}
+
 @media screen and (max-width:500px)
 {
     .whywe{
@@ -285,6 +287,19 @@
         clear: both;
     }
 }
+
+@media screen and (max-width:480px)
+{
+    .block-moviel-list__wrap{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .movie-list__table {
+        min-width: 40rem;
+    }
+}
+
 @media screen and (max-width:320px)
 {
     .block-hat:after{
@@ -366,7 +381,7 @@
     }
 
     .movie-list__table {
-        min-width: 100rem;
+        min-width: 60rem;
     }
     
     .movie-list__plus {
